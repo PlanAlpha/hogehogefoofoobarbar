@@ -126,12 +126,12 @@ void toggler()
 
 #define LAMBDA(arglist, arrow, retType, body)	\
 ({                                              \
-class Lambda                                \
-{                                           \
-public:                                     \
-static retType func arglist body        \
-};                                          \
-Lambda::func;                               \
+    class Lambda                                \
+    {                                           \
+    public:                                     \
+    static retType func arglist body            \
+    };                                          \
+    Lambda::func;                               \
 })
 
 #define DURATION 250
