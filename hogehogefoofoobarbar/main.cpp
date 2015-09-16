@@ -136,31 +136,11 @@ void toggler()
 
 #define DURATION 250
 
-InterruptIn<17> powerInput;
-
 int main(int __attribute__((unused)) argc, const char __attribute__((unused)) * argv[])
 {
-    DigitalOut led(BOARD_LED_PIN);
-    led = 1;
-    
-    powerInput.attach(LAMBDA((), ->, void, {
-        static unsigned long powerOffTime = 0;
-        if (powerInput) {
-            if (powerOffTime < millis()) {
-                DigitalOut(18).write(0);
-            }
-        } else {
-            powerOffTime = millis() + 500;
-        }
-    }), decltype(powerInput)::Mode::Changing);
-    while (1) {
-        
-    }
-    
     uint16_t level = std::numeric_limits<uint16_t>::max() / 2;
     int duration = DURATION;  // 8分音符
     Speaker<25> pin;
-//    DigitalIn button(22);
     pinMode(BOARD_LED_PIN, OUTPUT);
     InterruptIn<22> button;
     button.attach(toggler, decltype(button)::Mode::Falling);
