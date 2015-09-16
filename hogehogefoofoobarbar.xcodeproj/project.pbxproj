@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		CEAB79AD1BA949CE001F320B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEAB79AC1BA949CE001F320B /* main.cpp */; };
 		CEAB79AF1BA949CE001F320B /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = CEAB79AE1BA949CE001F320B /* Makefile */; };
+		CEAB79D91BA94C1C001F320B /* AnalogIn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEAB79C91BA94C1C001F320B /* AnalogIn.cpp */; };
+		CEAB79DA1BA94C1C001F320B /* DigitalIn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEAB79CB1BA94C1C001F320B /* DigitalIn.cpp */; };
+		CEAB79DB1BA94C1C001F320B /* DigitalInOut.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEAB79CD1BA94C1C001F320B /* DigitalInOut.cpp */; };
+		CEAB79DC1BA94C1C001F320B /* DigitalOut.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEAB79CF1BA94C1C001F320B /* DigitalOut.cpp */; };
+		CEAB79DD1BA94C1C001F320B /* GCSonicSensor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEAB79D21BA94C1C001F320B /* GCSonicSensor.cpp */; };
+		CEAB79DE1BA94C1C001F320B /* PwmOut.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEAB79D51BA94C1C001F320B /* PwmOut.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -17,6 +23,22 @@
 		CEAB79AE1BA949CE001F320B /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 		CEAB79B01BA949CE001F320B /* MapleMini.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = MapleMini.xcconfig; sourceTree = "<group>"; };
 		CEAB79B11BA949CE001F320B /* reset.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = reset.py; sourceTree = "<group>"; };
+		CEAB79C91BA94C1C001F320B /* AnalogIn.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AnalogIn.cpp; sourceTree = "<group>"; };
+		CEAB79CA1BA94C1C001F320B /* AnalogIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnalogIn.h; sourceTree = "<group>"; };
+		CEAB79CB1BA94C1C001F320B /* DigitalIn.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DigitalIn.cpp; sourceTree = "<group>"; };
+		CEAB79CC1BA94C1C001F320B /* DigitalIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DigitalIn.h; sourceTree = "<group>"; };
+		CEAB79CD1BA94C1C001F320B /* DigitalInOut.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DigitalInOut.cpp; sourceTree = "<group>"; };
+		CEAB79CE1BA94C1C001F320B /* DigitalInOut.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DigitalInOut.h; sourceTree = "<group>"; };
+		CEAB79CF1BA94C1C001F320B /* DigitalOut.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DigitalOut.cpp; sourceTree = "<group>"; };
+		CEAB79D01BA94C1C001F320B /* DigitalOut.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DigitalOut.h; sourceTree = "<group>"; };
+		CEAB79D11BA94C1C001F320B /* FunctionPointer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunctionPointer.h; sourceTree = "<group>"; };
+		CEAB79D21BA94C1C001F320B /* GCSonicSensor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GCSonicSensor.cpp; sourceTree = "<group>"; };
+		CEAB79D31BA94C1C001F320B /* GCSonicSensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCSonicSensor.h; sourceTree = "<group>"; };
+		CEAB79D41BA94C1C001F320B /* InterruptIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterruptIn.h; sourceTree = "<group>"; };
+		CEAB79D51BA94C1C001F320B /* PwmOut.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PwmOut.cpp; sourceTree = "<group>"; };
+		CEAB79D61BA94C1C001F320B /* PwmOut.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PwmOut.h; sourceTree = "<group>"; };
+		CEAB79D71BA94C1C001F320B /* Servo */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Servo; sourceTree = "<group>"; };
+		CEAB79D81BA94C1C001F320B /* Speaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Speaker.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -39,6 +61,22 @@
 		CEAB79AB1BA949CE001F320B /* hogehogefoofoobarbar */ = {
 			isa = PBXGroup;
 			children = (
+				CEAB79C91BA94C1C001F320B /* AnalogIn.cpp */,
+				CEAB79CA1BA94C1C001F320B /* AnalogIn.h */,
+				CEAB79CB1BA94C1C001F320B /* DigitalIn.cpp */,
+				CEAB79CC1BA94C1C001F320B /* DigitalIn.h */,
+				CEAB79CD1BA94C1C001F320B /* DigitalInOut.cpp */,
+				CEAB79CE1BA94C1C001F320B /* DigitalInOut.h */,
+				CEAB79CF1BA94C1C001F320B /* DigitalOut.cpp */,
+				CEAB79D01BA94C1C001F320B /* DigitalOut.h */,
+				CEAB79D11BA94C1C001F320B /* FunctionPointer.h */,
+				CEAB79D21BA94C1C001F320B /* GCSonicSensor.cpp */,
+				CEAB79D31BA94C1C001F320B /* GCSonicSensor.h */,
+				CEAB79D41BA94C1C001F320B /* InterruptIn.h */,
+				CEAB79D51BA94C1C001F320B /* PwmOut.cpp */,
+				CEAB79D61BA94C1C001F320B /* PwmOut.h */,
+				CEAB79D71BA94C1C001F320B /* Servo */,
+				CEAB79D81BA94C1C001F320B /* Speaker.h */,
 				CEAB79AC1BA949CE001F320B /* main.cpp */,
 				CEAB79AE1BA949CE001F320B /* Makefile */,
 				CEAB79B01BA949CE001F320B /* MapleMini.xcconfig */,
@@ -208,6 +246,12 @@
 			files = (
 				CEAB79AF1BA949CE001F320B /* Makefile in Sources */,
 				CEAB79AD1BA949CE001F320B /* main.cpp in Sources */,
+				CEAB79DD1BA94C1C001F320B /* GCSonicSensor.cpp in Sources */,
+				CEAB79DB1BA94C1C001F320B /* DigitalInOut.cpp in Sources */,
+				CEAB79D91BA94C1C001F320B /* AnalogIn.cpp in Sources */,
+				CEAB79DA1BA94C1C001F320B /* DigitalIn.cpp in Sources */,
+				CEAB79DC1BA94C1C001F320B /* DigitalOut.cpp in Sources */,
+				CEAB79DE1BA94C1C001F320B /* PwmOut.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
