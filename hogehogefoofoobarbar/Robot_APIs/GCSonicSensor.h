@@ -1,7 +1,7 @@
 #ifndef __GCSonicSensor__
 #define __GCSonicSensor__
 
-#include "DigitalInOut.h"
+#include "Core_APIs/DigitalInOut.h"
 
 class GCSonicSensor {
     static const int timeout;

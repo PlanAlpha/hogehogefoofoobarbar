@@ -5,7 +5,7 @@
 #include <timer.h>
 #include <boards.h>
 #include <io.h>
-#include "PwmOut.h"
+#include "Core_APIs/PwmOut.h"
 
 template <uint8_t pin>
 class Speaker {
