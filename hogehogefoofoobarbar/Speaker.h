@@ -29,17 +29,11 @@ class Speaker {
     
 public:
     Speaker() : pwmInstance(pin) {
-//        pinMode(pin, PWM);
-//        timer = PIN_MAP[pin].timer_device;
-//        channel = PIN_MAP[pin].timer_channel;
-//        timer_attach_interrupt(timer, channel, callback);
-//        timer_disable_irq(timer, channel);
         pwm = &pwmInstance;
         pwm->attach(&Speaker<pin>::callback);
         pwm->disableIRQ();
     }
     void play(uint32_t frequency, uint16_t level, uint32_t duration) {
-//        timer_disable_irq(timer, channel);
         pwm->disableIRQ();
         uint32_t period = 1000000 / frequency;
         setPeriod(period);
@@ -47,7 +41,6 @@ public:
         count = 0;
         write(level);
         pwm->enableIRQ();
-//        timer_enable_irq(timer, channel);
     }
 };
 
