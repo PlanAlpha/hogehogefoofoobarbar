@@ -2,7 +2,7 @@
 
 int main(int argc, const char * argv[])
 {
-    <#insert your program#>
+    init();
 
     return 0;
 }
