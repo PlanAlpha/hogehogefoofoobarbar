@@ -25,8 +25,7 @@ I2CDevice::I2CDevice(Pin devIndex, uint8_t _address) : address(_address)
 
 void I2CDevice::write(uint8_t reg, uint8_t data)
 {
-    uint8_t datas[] = {data};
-    write(reg, datas, 1);
+    write(reg, &data, 1);
 }
 
 void I2CDevice::write(uint8_t reg, uint8_t *datas, uint16_t length)
