@@ -160,7 +160,7 @@ int main(int __attribute__((unused)) argc, const char __attribute__((unused)) * 
     uint16_t level = std::numeric_limits<uint16_t>::max() / 2;
     int duration = DURATION;  // 8分音符
     Speaker<25> pin;
-    //    DigitalIn button(22);
+//    DigitalIn button(22);
     pinMode(BOARD_LED_PIN, OUTPUT);
     InterruptIn<22> button;
     button.attach(toggler, decltype(button)::Mode::Falling);
