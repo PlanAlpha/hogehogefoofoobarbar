@@ -1,0 +1,452 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CEAB79AD1BA949CE001F320B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEAB79AC1BA949CE001F320B /* main.cpp */; };
+		CEAB79AF1BA949CE001F320B /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = CEAB79AE1BA949CE001F320B /* Makefile */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CEAB79A91BA949CE001F320B /* Index */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Index; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEAB79AC1BA949CE001F320B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		CEAB79AE1BA949CE001F320B /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		CEAB79B01BA949CE001F320B /* MapleMini.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = MapleMini.xcconfig; sourceTree = "<group>"; };
+		CEAB79B11BA949CE001F320B /* reset.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = reset.py; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		CEAB799C1BA949CE001F320B = {
+			isa = PBXGroup;
+			children = (
+				CEAB79AB1BA949CE001F320B /* hogehogefoofoobarbar */,
+				CEAB79AA1BA949CE001F320B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CEAB79AA1BA949CE001F320B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CEAB79A91BA949CE001F320B /* Index */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CEAB79AB1BA949CE001F320B /* hogehogefoofoobarbar */ = {
+			isa = PBXGroup;
+			children = (
+				CEAB79AC1BA949CE001F320B /* main.cpp */,
+				CEAB79AE1BA949CE001F320B /* Makefile */,
+				CEAB79B01BA949CE001F320B /* MapleMini.xcconfig */,
+				CEAB79B11BA949CE001F320B /* reset.py */,
+			);
+			path = hogehogefoofoobarbar;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		CEAB79A11BA949CE001F320B /* All */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "all -C \"$(PROJECT)\"";
+			buildConfigurationList = CEAB79B41BA949CE001F320B /* Build configuration list for PBXLegacyTarget "All" */;
+			buildPhases = (
+			);
+			buildToolPath = make;
+			dependencies = (
+			);
+			name = All;
+			passBuildSettingsInEnvironment = 1;
+			productName = All;
+		};
+		CEAB79A21BA949CE001F320B /* Build */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "build -C \"$(PROJECT)\"";
+			buildConfigurationList = CEAB79B71BA949CE001F320B /* Build configuration list for PBXLegacyTarget "Build" */;
+			buildPhases = (
+			);
+			buildToolPath = make;
+			dependencies = (
+			);
+			name = Build;
+			passBuildSettingsInEnvironment = 1;
+			productName = Build;
+		};
+		CEAB79A31BA949CE001F320B /* Upload */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "upload -C \"$(PROJECT)\"";
+			buildConfigurationList = CEAB79BA1BA949CE001F320B /* Build configuration list for PBXLegacyTarget "Upload" */;
+			buildPhases = (
+			);
+			buildToolPath = make;
+			dependencies = (
+			);
+			name = Upload;
+			passBuildSettingsInEnvironment = 1;
+			productName = Upload;
+		};
+		CEAB79A41BA949CE001F320B /* Build&Upload */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "buildAndUpload -C \"$(PROJECT)\"";
+			buildConfigurationList = CEAB79BD1BA949CE001F320B /* Build configuration list for PBXLegacyTarget "Build&Upload" */;
+			buildPhases = (
+			);
+			buildToolPath = make;
+			dependencies = (
+			);
+			name = "Build&Upload";
+			passBuildSettingsInEnvironment = 1;
+			productName = "Build&Upload";
+		};
+		CEAB79A51BA949CE001F320B /* Clean */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "clean -C \"$(PROJECT)\"";
+			buildConfigurationList = CEAB79C01BA949CE001F320B /* Build configuration list for PBXLegacyTarget "Clean" */;
+			buildPhases = (
+			);
+			buildToolPath = make;
+			dependencies = (
+			);
+			name = Clean;
+			passBuildSettingsInEnvironment = 1;
+			productName = Clean;
+		};
+		CEAB79A61BA949CE001F320B /* AllClean */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "allclean -C \"$(PROJECT)\"";
+			buildConfigurationList = CEAB79C31BA949CE001F320B /* Build configuration list for PBXLegacyTarget "AllClean" */;
+			buildPhases = (
+			);
+			buildToolPath = make;
+			dependencies = (
+			);
+			name = AllClean;
+			passBuildSettingsInEnvironment = 1;
+			productName = AllClean;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXNativeTarget section */
+		CEAB79A81BA949CE001F320B /* Index */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEAB79C61BA949CE001F320B /* Build configuration list for PBXNativeTarget "Index" */;
+			buildPhases = (
+				CEAB79A71BA949CE001F320B /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Index;
+			productName = Index;
+			productReference = CEAB79A91BA949CE001F320B /* Index */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CEAB799D1BA949CE001F320B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = USER;
+				TargetAttributes = {
+					CEAB79A11BA949CE001F320B = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					CEAB79A21BA949CE001F320B = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					CEAB79A31BA949CE001F320B = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					CEAB79A41BA949CE001F320B = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					CEAB79A51BA949CE001F320B = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					CEAB79A61BA949CE001F320B = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					CEAB79A81BA949CE001F320B = {
+						CreatedOnToolsVersion = 6.4;
+					};
+				};
+			};
+			buildConfigurationList = CEAB79A01BA949CE001F320B /* Build configuration list for PBXProject "hogehogefoofoobarbar" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CEAB799C1BA949CE001F320B;
+			productRefGroup = CEAB79AA1BA949CE001F320B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CEAB79A11BA949CE001F320B /* All */,
+				CEAB79A21BA949CE001F320B /* Build */,
+				CEAB79A31BA949CE001F320B /* Upload */,
+				CEAB79A41BA949CE001F320B /* Build&Upload */,
+				CEAB79A51BA949CE001F320B /* Clean */,
+				CEAB79A61BA949CE001F320B /* AllClean */,
+				CEAB79A81BA949CE001F320B /* Index */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CEAB79A71BA949CE001F320B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEAB79AF1BA949CE001F320B /* Makefile in Sources */,
+				CEAB79AD1BA949CE001F320B /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		CEAB79B21BA949CE001F320B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CEAB79B01BA949CE001F320B /* MapleMini.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PATH = "$(PATH):$(PROJECT_DIR)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CEAB79B31BA949CE001F320B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PATH = "$(PATH):$(PROJECT_DIR)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		CEAB79B51BA949CE001F320B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CEAB79B61BA949CE001F320B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		CEAB79B81BA949CE001F320B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		CEAB79B91BA949CE001F320B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		CEAB79BB1BA949CE001F320B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		CEAB79BC1BA949CE001F320B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		CEAB79BE1BA949CE001F320B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		CEAB79BF1BA949CE001F320B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		CEAB79C11BA949CE001F320B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		CEAB79C21BA949CE001F320B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		CEAB79C41BA949CE001F320B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		CEAB79C51BA949CE001F320B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		CEAB79C71BA949CE001F320B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		CEAB79C81BA949CE001F320B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CEAB79A01BA949CE001F320B /* Build configuration list for PBXProject "hogehogefoofoobarbar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEAB79B21BA949CE001F320B /* Debug */,
+				CEAB79B31BA949CE001F320B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEAB79B41BA949CE001F320B /* Build configuration list for PBXLegacyTarget "All" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEAB79B51BA949CE001F320B /* Debug */,
+				CEAB79B61BA949CE001F320B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CEAB79B71BA949CE001F320B /* Build configuration list for PBXLegacyTarget "Build" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEAB79B81BA949CE001F320B /* Debug */,
+				CEAB79B91BA949CE001F320B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CEAB79BA1BA949CE001F320B /* Build configuration list for PBXLegacyTarget "Upload" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEAB79BB1BA949CE001F320B /* Debug */,
+				CEAB79BC1BA949CE001F320B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CEAB79BD1BA949CE001F320B /* Build configuration list for PBXLegacyTarget "Build&Upload" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEAB79BE1BA949CE001F320B /* Debug */,
+				CEAB79BF1BA949CE001F320B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CEAB79C01BA949CE001F320B /* Build configuration list for PBXLegacyTarget "Clean" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEAB79C11BA949CE001F320B /* Debug */,
+				CEAB79C21BA949CE001F320B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CEAB79C31BA949CE001F320B /* Build configuration list for PBXLegacyTarget "AllClean" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEAB79C41BA949CE001F320B /* Debug */,
+				CEAB79C51BA949CE001F320B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CEAB79C61BA949CE001F320B /* Build configuration list for PBXNativeTarget "Index" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEAB79C71BA949CE001F320B /* Debug */,
+				CEAB79C81BA949CE001F320B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CEAB799D1BA949CE001F320B /* Project object */;
+}
