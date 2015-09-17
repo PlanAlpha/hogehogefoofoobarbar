@@ -1,25 +1,16 @@
 #include "SPIDevice.h"
 #include <string.h>
 
-bool SPIDevice::isSPI1Initialized = false;
-bool SPIDevice::isSPI2Initialized = false;
-
-SPIDevice::SPIDevice(Pin devIndex, uint8_t _address) : address(_address)
+SPIDevice::SPIDevice(Pin devIndex, uint8_t _address, Baud baud, Mode mode) : address(_address)
 {
     if (devIndex == Pin::SPI1) {
         dev = SPI1;
-        if (! isSPI1Initialized) {
-            spi_init(dev);
-            spi_master_enable(dev, SPI_BAUD_PCLK_DIV_2, SPI_MODE_0, 0);
-            isSPI1Initialized = true;
-        }
+        spi_init(dev);
+        spi_master_enable(dev, static_cast<spi_baud_rate>(baud), static_cast<spi_mode>(mode), 0);
     } else {
         dev = SPI2;
-        if (! isSPI2Initialized) {
-            spi_init(dev);
-            spi_master_enable(dev, SPI_BAUD_PCLK_DIV_2, SPI_MODE_0, 0);
-            isSPI2Initialized = true;
-        }
+        spi_init(dev);
+        spi_master_enable(dev, static_cast<spi_baud_rate>(baud), static_cast<spi_mode>(mode), 0);
     }
 }
 
