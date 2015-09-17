@@ -24,7 +24,10 @@ void SPIDevice::write(uint8_t reg, uint8_t *datas, uint32_t length)
     uint8_t buf[length + 1];
     memcpy(buf + 1, datas, length);
     buf[0] = reg;
-    spi_tx(dev, datas, length);
+    uint8_t remind = length + 1;
+    do {
+        remind -= spi_tx(dev, buf, remind);
+    } while (remind);
 }
 
 uint8_t SPIDevice::read(uint8_t reg)
