@@ -10,6 +10,7 @@
 		CE2C0F451BA98D3D00936DF7 /* I2CDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE2C0F431BA98D3D00936DF7 /* I2CDevice.cpp */; };
 		CE2C0F481BA98D4C00936DF7 /* GCADJD.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE2C0F461BA98D4C00936DF7 /* GCADJD.cpp */; };
 		CE2C0F4B1BA98D5700936DF7 /* GC6050.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE2C0F491BA98D5700936DF7 /* GC6050.cpp */; };
+		CE7F90161BAACF9600BB3895 /* SPIDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE7F90141BAACF9600BB3895 /* SPIDevice.cpp */; };
 		CEAB79AD1BA949CE001F320B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEAB79AC1BA949CE001F320B /* main.cpp */; };
 		CEAB79D91BA94C1C001F320B /* AnalogIn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEAB79C91BA94C1C001F320B /* AnalogIn.cpp */; };
 		CEAB79DA1BA94C1C001F320B /* DigitalIn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEAB79CB1BA94C1C001F320B /* DigitalIn.cpp */; };
@@ -17,7 +18,7 @@
 		CEAB79DC1BA94C1C001F320B /* DigitalOut.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEAB79CF1BA94C1C001F320B /* DigitalOut.cpp */; };
 		CEAB79DD1BA94C1C001F320B /* GCSonicSensor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEAB79D21BA94C1C001F320B /* GCSonicSensor.cpp */; };
 		CEAB79DE1BA94C1C001F320B /* PwmOut.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEAB79D51BA94C1C001F320B /* PwmOut.cpp */; };
-		CED95C2F1BAA84B2003974CD /* PAL3G4200D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED95C2D1BAA84B2003974CD /* PAL3G4200D.cpp */; settings = {ASSET_TAGS = (); }; };
+		CED95C2F1BAA84B2003974CD /* PAL3G4200D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED95C2D1BAA84B2003974CD /* PAL3G4200D.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,8 @@
 		CE2C0F471BA98D4C00936DF7 /* GCADJD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCADJD.h; sourceTree = "<group>"; };
 		CE2C0F491BA98D5700936DF7 /* GC6050.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GC6050.cpp; sourceTree = "<group>"; };
 		CE2C0F4A1BA98D5700936DF7 /* GC6050.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GC6050.h; sourceTree = "<group>"; };
+		CE7F90141BAACF9600BB3895 /* SPIDevice.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SPIDevice.cpp; sourceTree = "<group>"; };
+		CE7F90151BAACF9600BB3895 /* SPIDevice.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = SPIDevice.h; sourceTree = "<group>"; };
 		CEAB79A91BA949CE001F320B /* Index */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Index; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEAB79AC1BA949CE001F320B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		CEAB79C91BA94C1C001F320B /* AnalogIn.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AnalogIn.cpp; sourceTree = "<group>"; };
@@ -68,6 +71,8 @@
 				CEAB79D41BA94C1C001F320B /* InterruptIn.h */,
 				CEAB79D61BA94C1C001F320B /* PwmOut.h */,
 				CEAB79D51BA94C1C001F320B /* PwmOut.cpp */,
+				CE7F90151BAACF9600BB3895 /* SPIDevice.h */,
+				CE7F90141BAACF9600BB3895 /* SPIDevice.cpp */,
 			);
 			path = Core_APIs;
 			sourceTree = "<group>";
@@ -142,11 +147,12 @@
 		};
 		CEAB79A21BA949CE001F320B /* Build */ = {
 			isa = PBXLegacyTarget;
-			buildArgumentsString = "build -C \"$(PROJECT)\"";
+			buildArgumentsString = build;
 			buildConfigurationList = CEAB79B71BA949CE001F320B /* Build configuration list for PBXLegacyTarget "Build" */;
 			buildPhases = (
 			);
 			buildToolPath = make;
+			buildWorkingDirectory = "$(PROJECT)";
 			dependencies = (
 			);
 			name = Build;
@@ -285,6 +291,7 @@
 			files = (
 				CE2C0F4B1BA98D5700936DF7 /* GC6050.cpp in Sources */,
 				CEAB79AD1BA949CE001F320B /* main.cpp in Sources */,
+				CE7F90161BAACF9600BB3895 /* SPIDevice.cpp in Sources */,
 				CEAB79DD1BA94C1C001F320B /* GCSonicSensor.cpp in Sources */,
 				CEAB79DB1BA94C1C001F320B /* DigitalInOut.cpp in Sources */,
 				CEAB79D91BA94C1C001F320B /* AnalogIn.cpp in Sources */,
