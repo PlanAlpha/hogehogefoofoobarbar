@@ -1,6 +1,6 @@
 #include <limits>
 #include <stdint.h>
-#include "Robot_APIs/Speaker.h"
+#include "Robot_APIs/PASpeaker.h"
 #include "Core_APIs/DigitalIn.h"
 #include "Core_APIs/DigitalOut.h"
 #include "Core_APIs/AnalogIn.h"
@@ -140,7 +140,7 @@ int main(int __attribute__((unused)) argc, const char __attribute__((unused)) * 
 {
     uint16_t level = std::numeric_limits<uint16_t>::max() / 2;
     int duration = DURATION;  // 8分音符
-    Speaker<25> pin;
+    PASpeaker<25> pin;
     pinMode(BOARD_LED_PIN, OUTPUT);
     InterruptIn<22> button;
     button.attach(toggler, decltype(button)::Mode::Falling);

@@ -5,10 +5,10 @@
 #include <timer.h>
 #include <boards.h>
 #include <io.h>
-#include "Core_APIs/PwmOut.h"
+#include "../Core_APIs/PwmOut.h"
 
 template <uint8_t pin>
-class Speaker {
+class PASpeaker {
     static PwmOut *pwm;
     PwmOut pwmInstance;
     static uint32_t count;
@@ -28,9 +28,9 @@ class Speaker {
     }
     
 public:
-    Speaker() : pwmInstance(pin) {
+    PASpeaker() : pwmInstance(pin) {
         pwm = &pwmInstance;
-        pwm->attach(&Speaker<pin>::callback);
+        pwm->attach(&PASpeaker<pin>::callback);
         pwm->disableIRQ();
     }
     void play(uint32_t frequency, uint16_t level, uint32_t duration) {
@@ -44,8 +44,8 @@ public:
     }
 };
 
-template <uint8_t pin> PwmOut* Speaker<pin>::pwm = NULL;
-template <uint8_t pin> uint32_t Speaker<pin>::count = 0;
-template <uint8_t pin> uint32_t Speaker<pin>::countLimit = 0;
+template <uint8_t pin> PwmOut* PASpeaker<pin>::pwm = NULL;
+template <uint8_t pin> uint32_t PASpeaker<pin>::count = 0;
+template <uint8_t pin> uint32_t PASpeaker<pin>::countLimit = 0;
 
 #endif
