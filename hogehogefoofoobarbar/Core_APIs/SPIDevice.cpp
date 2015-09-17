@@ -19,7 +19,7 @@ void SPIDevice::write(uint8_t reg, uint8_t data)
     write(reg, &data, 1);
 }
 
-void SPIDevice::write(uint8_t reg, uint8_t *datas, uint16_t length)
+void SPIDevice::write(uint8_t reg, uint8_t *datas, uint32_t length)
 {
     uint8_t buf[length + 1];
     memcpy(buf + 1, datas, length);
@@ -34,7 +34,7 @@ uint8_t SPIDevice::read(uint8_t reg)
     return buf;
 }
 
-void SPIDevice::read(uint8_t reg, uint8_t *buf, uint16_t length)
+void SPIDevice::read(uint8_t reg, uint8_t *buf, uint32_t length)
 {
     spi_tx(dev, &reg, 1);
     do {

@@ -31,9 +31,9 @@ public:
     SPIDevice(Pin dev, Baud baud, Mode mode);
     ~SPIDevice();
     void write(uint8_t reg, uint8_t data);
-    void write(uint8_t reg, uint8_t *datas, uint16_t length);
+    void write(uint8_t reg, uint8_t *datas, uint32_t length);
     uint8_t read(uint8_t reg);
-    void read(uint8_t reg, uint8_t *buf, uint16_t length);
+    void read(uint8_t reg, uint8_t *buf, uint32_t length);
 };
 
 
