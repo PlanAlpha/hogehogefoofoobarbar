@@ -27,16 +27,9 @@ bool GCSonicSensor::isFar()
 unsigned long GCSonicSensor::getValue()
 {
     pin.output();
-    pin.write(0);
-    delayMicroseconds(interval);
     pin.write(1);
     delayMicroseconds(interval);
     pin.write(0);
-    delayMicroseconds(interval);
     pin.input();
-    uint32_t begin = micros();
-    while (micros() - begin < timeout) {
-        if (! pin) break;
-    }
-    return value = (micros() - begin) * 17 / 1000;
+    return value = pin.readPulse(1, timeout) * 17 / 1000;
 }
