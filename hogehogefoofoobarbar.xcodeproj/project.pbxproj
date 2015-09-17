@@ -44,13 +44,14 @@
 		CEAB79D51BA94C1C001F320B /* PwmOut.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PwmOut.cpp; sourceTree = "<group>"; };
 		CEAB79D61BA94C1C001F320B /* PwmOut.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PwmOut.h; sourceTree = "<group>"; };
 		CEAB79D71BA94C1C001F320B /* Servo */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Servo; sourceTree = "<group>"; };
-		CEAB79D81BA94C1C001F320B /* Speaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Speaker.h; sourceTree = "<group>"; };
+		CEAB79D81BA94C1C001F320B /* PASpeaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PASpeaker.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
 		CE2C0F3D1BA9835D00936DF7 /* Core_APIs */ = {
 			isa = PBXGroup;
 			children = (
+				CEAB79D11BA94C1C001F320B /* FunctionPointer.h */,
 				CE2C0F441BA98D3D00936DF7 /* I2CDevice.h */,
 				CE2C0F431BA98D3D00936DF7 /* I2CDevice.cpp */,
 				CEAB79CA1BA94C1C001F320B /* AnalogIn.h */,
@@ -73,8 +74,7 @@
 			children = (
 				CEAB79D31BA94C1C001F320B /* GCSonicSensor.h */,
 				CEAB79D21BA94C1C001F320B /* GCSonicSensor.cpp */,
-				CEAB79D81BA94C1C001F320B /* Speaker.h */,
-				CEAB79D11BA94C1C001F320B /* FunctionPointer.h */,
+				CEAB79D81BA94C1C001F320B /* PASpeaker.h */,
 				CE2C0F471BA98D4C00936DF7 /* GCADJD.h */,
 				CE2C0F461BA98D4C00936DF7 /* GCADJD.cpp */,
 				CE2C0F4A1BA98D5700936DF7 /* GC6050.h */,
