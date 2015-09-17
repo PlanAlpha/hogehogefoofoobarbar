@@ -17,6 +17,7 @@ public:
     operator bool () {
         return read();
     }
+    uint32_t readPulse(uint8_t state, uint32_t timeout = 100000);
 };
 
 #endif

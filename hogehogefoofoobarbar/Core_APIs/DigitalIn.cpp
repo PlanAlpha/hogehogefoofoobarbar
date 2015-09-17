@@ -1,4 +1,6 @@
 #include "DigitalIn.h"
+#include <ext_interrupts.h>
+#include <wirish_time.h>
 
 DigitalIn::DigitalIn(uint8_t pin, WiringPinMode mode)
 {
@@ -34,4 +36,20 @@ DigitalIn::DigitalIn(uint8_t pin, WiringPinMode mode)
     if (info.timer_device) {
         timer_set_mode(info.timer_device, info.timer_channel, TIMER_DISABLED);
     }
+}
+
+uint32_t DigitalIn::readPulse(uint8_t state, uint32_t timeout)
+{
+    uint32_t beg = micros();
+    while (read() == state) {
+        if (timeout < micros() - beg) return 0;
+    }
+    while (read() != state) {
+        if (timeout < micros() - beg) return 0;
+    }
+    beg = micros();
+    while (read() == state) {
+        if (timeout < micros() - beg) return 0;
+    }
+    return micros() - beg;
 }
