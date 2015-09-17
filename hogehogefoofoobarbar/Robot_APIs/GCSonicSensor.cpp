@@ -1,11 +1,11 @@
 #include "GCSonicSensor.h"
-#include <limits.h>
+#include <limits>
 
 const int GCSonicSensor::timeout  = 10000;
 const int GCSonicSensor::interval = 15;
 
 GCSonicSensor::GCSonicSensor(uint8_t _pin, unsigned long _closeToWall)
-: pin(_pin), closeToWall(_closeToWall), farFromWall(INT_MAX)
+: pin(_pin), closeToWall(_closeToWall), farFromWall(std::numeric_limits<typeof(farFromWall)>::max())
 {
 }
 
