@@ -17,6 +17,7 @@
 		CEAB79DC1BA94C1C001F320B /* DigitalOut.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEAB79CF1BA94C1C001F320B /* DigitalOut.cpp */; };
 		CEAB79DD1BA94C1C001F320B /* GCSonicSensor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEAB79D21BA94C1C001F320B /* GCSonicSensor.cpp */; };
 		CEAB79DE1BA94C1C001F320B /* PwmOut.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEAB79D51BA94C1C001F320B /* PwmOut.cpp */; };
+		CED95C2F1BAA84B2003974CD /* PAL3G4200D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED95C2D1BAA84B2003974CD /* PAL3G4200D.cpp */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,8 @@
 		CEAB79D61BA94C1C001F320B /* PwmOut.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PwmOut.h; sourceTree = "<group>"; };
 		CEAB79D71BA94C1C001F320B /* Servo */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Servo; sourceTree = "<group>"; };
 		CEAB79D81BA94C1C001F320B /* PASpeaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PASpeaker.h; sourceTree = "<group>"; };
+		CED95C2D1BAA84B2003974CD /* PAL3G4200D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PAL3G4200D.cpp; sourceTree = "<group>"; };
+		CED95C2E1BAA84B2003974CD /* PAL3G4200D.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = PAL3G4200D.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -79,6 +82,8 @@
 				CE2C0F461BA98D4C00936DF7 /* GCADJD.cpp */,
 				CE2C0F4A1BA98D5700936DF7 /* GC6050.h */,
 				CE2C0F491BA98D5700936DF7 /* GC6050.cpp */,
+				CED95C2E1BAA84B2003974CD /* PAL3G4200D.h */,
+				CED95C2D1BAA84B2003974CD /* PAL3G4200D.cpp */,
 			);
 			path = Robot_APIs;
 			sourceTree = "<group>";
@@ -288,6 +293,7 @@
 				CEAB79DA1BA94C1C001F320B /* DigitalIn.cpp in Sources */,
 				CEAB79DC1BA94C1C001F320B /* DigitalOut.cpp in Sources */,
 				CEAB79DE1BA94C1C001F320B /* PwmOut.cpp in Sources */,
+				CED95C2F1BAA84B2003974CD /* PAL3G4200D.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
