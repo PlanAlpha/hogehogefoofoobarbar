@@ -6,7 +6,6 @@
 
 class SPIDevice {
     spi_dev *dev;
-    uint8_t address;
     
 public:
     enum class Pin {
@@ -29,7 +28,7 @@ public:
         Mode2 = SPI_MODE_2,
         Mode3 = SPI_MODE_3,
     };
-    SPIDevice(Pin dev, uint8_t address, Baud baud, Mode mode);
+    SPIDevice(Pin dev, Baud baud, Mode mode);
     ~SPIDevice();
     void write(uint8_t reg, uint8_t data);
     void write(uint8_t reg, uint8_t *datas, uint16_t length);

@@ -1,7 +1,7 @@
 #include "SPIDevice.h"
 #include <string.h>
 
-SPIDevice::SPIDevice(Pin devIndex, uint8_t _address, Baud baud, Mode mode) : address(_address)
+SPIDevice::SPIDevice(Pin devIndex, Baud baud, Mode mode)
 {
     if (devIndex == Pin::SPI1) {
         dev = SPI1;
