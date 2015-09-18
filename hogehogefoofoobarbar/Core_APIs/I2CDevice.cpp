@@ -1,5 +1,6 @@
 #include "I2CDevice.h"
 #include <string.h>
+#include <usb_serial.h>
 
 bool I2CDevice::isI2C1Initialized = false;
 bool I2CDevice::isI2C2Initialized = false;
@@ -42,7 +43,18 @@ void I2CDevice::write(uint8_t reg, uint8_t *datas, uint16_t length)
             buf
         },
     };
-    i2c_master_xfer(dev, msgs, 1, 0);
+    switch (i2c_master_xfer(dev, msgs, 1, 1000)) {
+        case I2C_ERROR_PROTOCOL:
+            SerialUSB.println("protocol error occured");
+            break;
+            
+        case I2C_ERROR_TIMEOUT:
+            SerialUSB.println("timeout occured");
+            break;
+            
+        default:
+            break;
+    }
 }
 
 uint8_t I2CDevice::read(uint8_t reg)
@@ -70,5 +82,18 @@ void I2CDevice::read(uint8_t reg, uint8_t *buf, uint16_t length)
             buf
         },
     };
-    i2c_master_xfer(dev, msgs, 2, 0);
+    switch (i2c_master_xfer(dev, msgs, 2, 1000)) {
+        case I2C_ERROR_PROTOCOL:
+            SerialUSB.println("protocol error occured");
+            i2c_init(dev);
+            i2c_master_enable(dev, 0);
+            break;
+            
+        case I2C_ERROR_TIMEOUT:
+            SerialUSB.println("timeout occured");
+            break;
+            
+        default:
+            break;
+    }
 }
