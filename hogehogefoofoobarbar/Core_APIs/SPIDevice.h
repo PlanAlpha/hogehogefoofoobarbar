@@ -29,7 +29,6 @@ public:
         Mode3 = SPI_MODE_3,
     };
     SPIDevice(Pin dev, Baud baud, Mode mode);
-    ~SPIDevice();
     void write(uint8_t reg, uint8_t data);
     void write(uint8_t reg, uint8_t *datas, uint32_t length);
     uint8_t read(uint8_t reg);

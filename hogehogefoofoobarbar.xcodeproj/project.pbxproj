@@ -174,11 +174,12 @@
 		};
 		CEAB79A41BA949CE001F320B /* Build&Upload */ = {
 			isa = PBXLegacyTarget;
-			buildArgumentsString = "buildAndUpload -C \"$(PROJECT)\"";
+			buildArgumentsString = buildAndUpload;
 			buildConfigurationList = CEAB79BD1BA949CE001F320B /* Build configuration list for PBXLegacyTarget "Build&Upload" */;
 			buildPhases = (
 			);
 			buildToolPath = make;
+			buildWorkingDirectory = "$(PROJECT)";
 			dependencies = (
 			);
 			name = "Build&Upload";
