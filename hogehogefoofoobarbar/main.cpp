@@ -7,7 +7,7 @@ int main(int __attribute__((unused)) argc, const char __attribute__((unused)) * 
 {
     init();
     SerialUSB.begin();
-    PAL3G4200D gyro(SPIDevice::Pin::SPI2);
+    PAL3G4200D gyro(I2CDevice::Pin::I2C1);
     SerialUSB.read();
 //    DigitalOut ss(31);
 //    HardwareSPI spi(2);
