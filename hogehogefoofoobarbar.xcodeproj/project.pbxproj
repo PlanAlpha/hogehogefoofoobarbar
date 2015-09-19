@@ -10,6 +10,7 @@
 		CE2C0F451BA98D3D00936DF7 /* I2CDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE2C0F431BA98D3D00936DF7 /* I2CDevice.cpp */; };
 		CE2C0F481BA98D4C00936DF7 /* GCADJD.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE2C0F461BA98D4C00936DF7 /* GCADJD.cpp */; };
 		CE2C0F4B1BA98D5700936DF7 /* GC6050.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE2C0F491BA98D5700936DF7 /* GC6050.cpp */; };
+		CE4372111BAD2A1800B28B0D /* hogehogefoofoobarbarTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE4372101BAD2A1800B28B0D /* hogehogefoofoobarbarTest.mm */; };
 		CE7F90161BAACF9600BB3895 /* SPIDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE7F90141BAACF9600BB3895 /* SPIDevice.cpp */; };
 		CEAB79AD1BA949CE001F320B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEAB79AC1BA949CE001F320B /* main.cpp */; };
 		CEAB79D91BA94C1C001F320B /* AnalogIn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEAB79C91BA94C1C001F320B /* AnalogIn.cpp */; };
@@ -30,6 +31,9 @@
 		CE2C0F491BA98D5700936DF7 /* GC6050.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GC6050.cpp; sourceTree = "<group>"; };
 		CE2C0F4A1BA98D5700936DF7 /* GC6050.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GC6050.h; sourceTree = "<group>"; };
 		CE4372061BAD1C2300B28B0D /* PAMovingAverage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAMovingAverage.h; sourceTree = "<group>"; };
+		CE43720E1BAD2A1700B28B0D /* hogehogefoofoobarbarTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = hogehogefoofoobarbarTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE4372101BAD2A1800B28B0D /* hogehogefoofoobarbarTest.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = hogehogefoofoobarbarTest.mm; sourceTree = "<group>"; };
+		CE4372121BAD2A1800B28B0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE7F90141BAACF9600BB3895 /* SPIDevice.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SPIDevice.cpp; sourceTree = "<group>"; };
 		CE7F90151BAACF9600BB3895 /* SPIDevice.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = SPIDevice.h; sourceTree = "<group>"; };
 		CEAB79A91BA949CE001F320B /* Index */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Index; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,6 +57,16 @@
 		CED95C2D1BAA84B2003974CD /* PAL3G4200D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PAL3G4200D.cpp; sourceTree = "<group>"; };
 		CED95C2E1BAA84B2003974CD /* PAL3G4200D.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = PAL3G4200D.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CE43720B1BAD2A1700B28B0D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		CE2C0F3D1BA9835D00936DF7 /* Core_APIs */ = {
@@ -103,10 +117,20 @@
 			path = Libraries;
 			sourceTree = "<group>";
 		};
+		CE43720F1BAD2A1800B28B0D /* hogehogefoofoobarbarTest */ = {
+			isa = PBXGroup;
+			children = (
+				CE4372101BAD2A1800B28B0D /* hogehogefoofoobarbarTest.mm */,
+				CE4372121BAD2A1800B28B0D /* Info.plist */,
+			);
+			path = hogehogefoofoobarbarTest;
+			sourceTree = "<group>";
+		};
 		CEAB799C1BA949CE001F320B = {
 			isa = PBXGroup;
 			children = (
 				CEAB79AB1BA949CE001F320B /* hogehogefoofoobarbar */,
+				CE43720F1BAD2A1800B28B0D /* hogehogefoofoobarbarTest */,
 				CEAB79AA1BA949CE001F320B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -115,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				CEAB79A91BA949CE001F320B /* Index */,
+				CE43720E1BAD2A1700B28B0D /* hogehogefoofoobarbarTest.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -217,6 +242,23 @@
 /* End PBXLegacyTarget section */
 
 /* Begin PBXNativeTarget section */
+		CE43720D1BAD2A1700B28B0D /* hogehogefoofoobarbarTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE4372131BAD2A1800B28B0D /* Build configuration list for PBXNativeTarget "hogehogefoofoobarbarTest" */;
+			buildPhases = (
+				CE43720A1BAD2A1700B28B0D /* Sources */,
+				CE43720B1BAD2A1700B28B0D /* Frameworks */,
+				CE43720C1BAD2A1700B28B0D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = hogehogefoofoobarbarTest;
+			productName = hogehogefoofoobarbarTest;
+			productReference = CE43720E1BAD2A1700B28B0D /* hogehogefoofoobarbarTest.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		CEAB79A81BA949CE001F320B /* Index */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CEAB79C61BA949CE001F320B /* Build configuration list for PBXNativeTarget "Index" */;
@@ -241,6 +283,9 @@
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = PlanAlpha;
 				TargetAttributes = {
+					CE43720D1BAD2A1700B28B0D = {
+						CreatedOnToolsVersion = 7.0;
+					};
 					CEAB79A11BA949CE001F320B = {
 						CreatedOnToolsVersion = 6.4;
 					};
@@ -283,11 +328,30 @@
 				CEAB79A51BA949CE001F320B /* Clean */,
 				CEAB79A61BA949CE001F320B /* AllClean */,
 				CEAB79A81BA949CE001F320B /* Index */,
+				CE43720D1BAD2A1700B28B0D /* hogehogefoofoobarbarTest */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		CE43720C1BAD2A1700B28B0D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		CE43720A1BAD2A1700B28B0D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE4372111BAD2A1800B28B0D /* hogehogefoofoobarbarTest.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CEAB79A71BA949CE001F320B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -310,6 +374,34 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		CE4372141BAD2A1800B28B0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = hogehogefoofoobarbarTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = PlanAlpha.hogehogefoofoobarbarTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		CE4372151BAD2A1800B28B0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				INFOPLIST_FILE = hogehogefoofoobarbarTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = PlanAlpha.hogehogefoofoobarbarTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 		CEAB79B21BA949CE001F320B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CE2C0F3F1BA983B100936DF7 /* MapleMini.xcconfig */;
@@ -478,6 +570,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		CE4372131BAD2A1800B28B0D /* Build configuration list for PBXNativeTarget "hogehogefoofoobarbarTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE4372141BAD2A1800B28B0D /* Debug */,
+				CE4372151BAD2A1800B28B0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		CEAB79A01BA949CE001F320B /* Build configuration list for PBXProject "hogehogefoofoobarbar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

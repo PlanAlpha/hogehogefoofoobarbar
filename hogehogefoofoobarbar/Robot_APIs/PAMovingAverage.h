@@ -17,6 +17,7 @@ public:
         while (movingValuesPoint != movingValuesLimit) {
             *movingValuesPoint++ = value;
         }
+        movingValuesPoint = movingValues;
         movingAverage = value;
     }
     T addValue(T value) {
