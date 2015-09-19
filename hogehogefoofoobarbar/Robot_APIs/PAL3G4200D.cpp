@@ -8,13 +8,11 @@ PAL3G4200D::PAL3G4200D(I2CDevice::Pin pin) : device(pin, i2cAddress)
 void PAL3G4200D::init()
 {
     while (1) {
-        SerialUSB.println("attempt to read whoami");
         uint8_t who = device.read(whoAmI);
         if (who != 211) {
             SerialUSB.print("error reading whoami ");
             SerialUSB.println(who, BIN);
         } else {
-            SerialUSB.println("successful");
             break;
         }
     }

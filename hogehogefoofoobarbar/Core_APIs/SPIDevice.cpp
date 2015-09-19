@@ -48,8 +48,7 @@ void SPIDevice::read(uint8_t reg, uint8_t *buf, uint32_t length)
         spi_rx_reg(dev);
     } while (1);
     do {
-        while (! spi_is_rx_nonempty(dev)) ;//SerialUSB.println("waiting for a response");
+        while (! spi_is_rx_nonempty(dev)) ;
         *buf++ = spi_rx_reg(dev);
-//        SerialUSB.println("response has read");
     } while (--length);
 }

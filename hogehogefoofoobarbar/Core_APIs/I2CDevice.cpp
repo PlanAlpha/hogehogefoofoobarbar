@@ -53,8 +53,10 @@ void I2CDevice::write(uint8_t reg, uint8_t *datas, uint16_t length)
             break;
             
         default:
-            break;
+            return;
     }
+    i2c_init(dev);
+    i2c_master_enable(dev, 0);
 }
 
 uint8_t I2CDevice::read(uint8_t reg)
@@ -85,8 +87,6 @@ void I2CDevice::read(uint8_t reg, uint8_t *buf, uint16_t length)
     switch (i2c_master_xfer(dev, msgs, 2, 1000)) {
         case I2C_ERROR_PROTOCOL:
             SerialUSB.println("protocol error occured");
-            i2c_init(dev);
-            i2c_master_enable(dev, 0);
             break;
             
         case I2C_ERROR_TIMEOUT:
@@ -94,6 +94,8 @@ void I2CDevice::read(uint8_t reg, uint8_t *buf, uint16_t length)
             break;
             
         default:
-            break;
+            return;
     }
+    i2c_init(dev);
+    i2c_master_enable(dev, 0);
 }
