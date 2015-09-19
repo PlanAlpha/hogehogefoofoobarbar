@@ -34,7 +34,7 @@ private:
     GyroValue  gyroOffsets  = {0, 0, 0};
     
 public:
-    GC6050(I2CDevice::Pin dev);
+    GC6050(I2CDevice::Pin dev, bool isAD0Pulluped = false);
     void updateValues();
     float accelX() {
         return currentAccelValue.x;

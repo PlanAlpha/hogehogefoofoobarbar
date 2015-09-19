@@ -1,6 +1,6 @@
 #include "GC6050.h"
 
-GC6050::GC6050(I2CDevice::Pin dev) : i2c(dev, i2cAddress)
+GC6050::GC6050(I2CDevice::Pin dev, bool isAD0Pulluped) : i2c(dev, i2cAddress | isAD0Pulluped)
 {
     if (i2c.read(whoAmIAddress) != i2cAddress) {
     }
