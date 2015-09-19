@@ -29,6 +29,7 @@
 		CE2C0F471BA98D4C00936DF7 /* GCADJD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCADJD.h; sourceTree = "<group>"; };
 		CE2C0F491BA98D5700936DF7 /* GC6050.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GC6050.cpp; sourceTree = "<group>"; };
 		CE2C0F4A1BA98D5700936DF7 /* GC6050.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GC6050.h; sourceTree = "<group>"; };
+		CE4372061BAD1C2300B28B0D /* PAMovingAverage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAMovingAverage.h; sourceTree = "<group>"; };
 		CE7F90141BAACF9600BB3895 /* SPIDevice.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SPIDevice.cpp; sourceTree = "<group>"; };
 		CE7F90151BAACF9600BB3895 /* SPIDevice.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = SPIDevice.h; sourceTree = "<group>"; };
 		CEAB79A91BA949CE001F320B /* Index */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Index; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,6 +90,7 @@
 				CE2C0F491BA98D5700936DF7 /* GC6050.cpp */,
 				CED95C2E1BAA84B2003974CD /* PAL3G4200D.h */,
 				CED95C2D1BAA84B2003974CD /* PAL3G4200D.cpp */,
+				CE4372061BAD1C2300B28B0D /* PAMovingAverage.h */,
 			);
 			path = Robot_APIs;
 			sourceTree = "<group>";

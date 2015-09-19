@@ -2,6 +2,7 @@
 #define __PAL3G4200D__
 
 #include "../Core_APIs/I2CDevice.h"
+#include "PAMovingAverage.h"
 
 class PAL3G4200D {
     static constexpr uint8_t i2cAddress = 105;
@@ -14,6 +15,9 @@ class PAL3G4200D {
     static constexpr uint8_t OUT_Y_L = 42;
     static constexpr uint8_t OUT_Z_L = 44;
     I2CDevice device;
+    PAMovingAverage<int16_t, 10> xAverage;
+    PAMovingAverage<int16_t, 10> yAverage;
+    PAMovingAverage<int16_t, 10> zAverage;
     union Data {
         uint8_t buf[2];
         int16_t value;
