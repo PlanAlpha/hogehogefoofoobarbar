@@ -5,10 +5,10 @@
 
 template <typename T, uint32_t numOfMovingValues>
 class PAMovingAverage {
-    T movingValues[numOfMovingValues];
-    T *movingValuesPoint = movingValues;
-    T *movingValuesLimit = movingValues + numOfMovingValues;
-    T movingAverage;
+    float movingValues[numOfMovingValues];
+    float *movingValuesPoint = movingValues;
+    float *movingValuesLimit = movingValues + numOfMovingValues;
+    float movingAverage;
     
 public:
     PAMovingAverage() {
@@ -24,9 +24,9 @@ public:
         if (++movingValuesPoint == movingValuesLimit) {
             movingValuesPoint = movingValues;
         }
-        movingAverage += -*movingValuesPoint / numOfMovingValues + value / numOfMovingValues;
+        movingAverage += -*movingValuesPoint / numOfMovingValues + static_cast<float>(value) / numOfMovingValues;
         *movingValuesPoint = value;
-        return movingAverage;
+        return static_cast<T>(movingAverage);
     }
 };
 

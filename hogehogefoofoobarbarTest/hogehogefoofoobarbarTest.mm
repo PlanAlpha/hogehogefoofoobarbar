@@ -21,9 +21,25 @@
 {
     PAMovingAverage<int16_t, 10> average;
     average.initialize(0);
-    XCTAssertEqual(average.addValue(0), 0);
-    XCTAssertEqual(average.addValue(0), 0);
-    XCTAssertEqual(average.addValue(0), 0);
+    for (int i = 0; i < 100; i++) {
+        switch (arc4random_uniform(3)) {
+            case 0:
+                XCTAssertEqual(average.addValue(-1), 0);
+                break;
+                
+            case 1:
+                XCTAssertEqual(average.addValue(0), 0);
+                break;
+                
+            case 2:
+                XCTAssertEqual(average.addValue(1), 0);
+                break;
+                
+            default:
+                XCTAssert(false);
+                break;
+        }
+    }
 }
 
 @end
