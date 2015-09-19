@@ -12,13 +12,11 @@ class PAMovingAverage {
     
 public:
     PAMovingAverage() {
-    }
-    void initialize(T value) {
         while (movingValuesPoint != movingValuesLimit) {
-            *movingValuesPoint++ = value;
+            *movingValuesPoint++ = 0;
         }
         movingValuesPoint = movingValues;
-        movingAverage = value;
+        movingAverage = 0;
     }
     T addValue(T value) {
         if (++movingValuesPoint == movingValuesLimit) {

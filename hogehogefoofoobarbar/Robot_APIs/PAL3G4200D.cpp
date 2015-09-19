@@ -20,27 +20,23 @@ PAL3G4200D::PAL3G4200D(I2CDevice::Pin pin) : device(pin, i2cAddress)
     /* set the bit order to MSB (big endian) */
     /* set the full scale to 2000 dps */
     device.write(CTRL_REG4, 0b01110000);
-    
-    xAverage.initialize(readX());
-    yAverage.initialize(readY());
-    zAverage.initialize(readZ());
 }
 
-int16_t PAL3G4200D::readX()
+float PAL3G4200D::readX()
 {
     Data data;
     device.read(OUT_X_L, data.buf, 2);
     return xAverage.addValue(data.value);
 }
 
-int16_t PAL3G4200D::readY()
+float PAL3G4200D::readY()
 {
     Data data;
     device.read(OUT_Y_L, data.buf, 2);
     return yAverage.addValue(data.value);
 }
 
-int16_t PAL3G4200D::readZ()
+float PAL3G4200D::readZ()
 {
     Data data;
     device.read(OUT_Z_L, data.buf, 2);

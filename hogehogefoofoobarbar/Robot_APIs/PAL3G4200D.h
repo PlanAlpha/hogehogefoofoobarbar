@@ -15,9 +15,9 @@ class PAL3G4200D {
     static constexpr uint8_t OUT_Y_L = 42;
     static constexpr uint8_t OUT_Z_L = 44;
     I2CDevice device;
-    PAMovingAverage<int16_t, 10> xAverage;
-    PAMovingAverage<int16_t, 10> yAverage;
-    PAMovingAverage<int16_t, 10> zAverage;
+    PAMovingAverage<float, 10> xAverage;
+    PAMovingAverage<float, 10> yAverage;
+    PAMovingAverage<float, 50> zAverage;
     union Data {
         uint8_t buf[2];
         int16_t value;
@@ -25,9 +25,9 @@ class PAL3G4200D {
     
 public:
     PAL3G4200D(I2CDevice::Pin pin);
-    int16_t readX();
-    int16_t readY();
-    int16_t readZ();
+    float readX();
+    float readY();
+    float readZ();
 };
 
 #endif

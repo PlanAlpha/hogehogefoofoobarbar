@@ -19,25 +19,51 @@
 
 - (void)testMovingAverage
 {
-    PAMovingAverage<int16_t, 10> average;
-    average.initialize(0);
-    for (int i = 0; i < 100; i++) {
-        switch (arc4random_uniform(3)) {
-            case 0:
-                XCTAssertEqual(average.addValue(-1), 0);
-                break;
-                
-            case 1:
-                XCTAssertEqual(average.addValue(0), 0);
-                break;
-                
-            case 2:
-                XCTAssertEqual(average.addValue(1), 0);
-                break;
-                
-            default:
-                XCTAssert(false);
-                break;
+    {
+        PAMovingAverage<int16_t, 10> average;
+        average.initialize(0);
+        for (int i = 0; i < 100; i++) {
+            switch (arc4random_uniform(3)) {
+                case 0:
+                    XCTAssertEqual(average.addValue(-1), 0);
+                    break;
+                    
+                case 1:
+                    XCTAssertEqual(average.addValue(0), 0);
+                    break;
+                    
+                case 2:
+                    XCTAssertEqual(average.addValue(1), 0);
+                    break;
+                    
+                default:
+                    XCTAssert(false);
+                    break;
+            }
+        }
+    }
+    
+    {
+        PAMovingAverage<float, 10> average;
+        average.initialize(0);
+        for (int i = 0; i < 100; i++) {
+            switch (arc4random_uniform(3)) {
+                case 0:
+                    XCTAssert(fabs(average.addValue(-1)) < 1);
+                    break;
+                    
+                case 1:
+                    XCTAssert(fabs(average.addValue(0)) < 1);
+                    break;
+                    
+                case 2:
+                    XCTAssert(fabs(average.addValue(1)) < 1);
+                    break;
+                    
+                default:
+                    XCTAssert(false);
+                    break;
+            }
         }
     }
 }

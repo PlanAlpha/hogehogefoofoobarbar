@@ -14,7 +14,6 @@ int main(int __attribute__((unused)) argc, const char __attribute__((unused)) * 
     GC6050 gyroAccel(I2CDevice::Pin::I2C1);
     while (1) {
         SerialUSB.println(gyro.readZ());
-        delay(100);
     }
     
     return 0;
