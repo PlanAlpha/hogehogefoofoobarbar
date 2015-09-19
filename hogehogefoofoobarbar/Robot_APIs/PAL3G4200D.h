@@ -4,7 +4,7 @@
 #include "../Core_APIs/I2CDevice.h"
 
 class PAL3G4200D {
-    static constexpr uint8_t i2cAddress = 104;
+    static constexpr uint8_t i2cAddress = 105;
     static constexpr uint8_t whoAmI = 15;
     static constexpr uint8_t CTRL_REG1 = 32;
     static constexpr uint8_t PD = 3;

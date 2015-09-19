@@ -1,8 +1,16 @@
 #include "GC6050.h"
+#include <usb_serial.h>
 
 GC6050::GC6050(I2CDevice::Pin dev, bool isAD0Pulluped) : i2c(dev, i2cAddress | isAD0Pulluped)
 {
-    if (i2c.read(whoAmIAddress) != i2cAddress) {
+    while (1) {
+        uint8_t who = i2c.read(whoAmIAddress);
+        if (i2c.read(whoAmIAddress) != i2cAddress) {
+            SerialUSB.print("error reading whoami ");
+            SerialUSB.println(who, BIN);
+        } else {
+            break;
+        }
     }
     
     uint8_t power = i2c.read(powerAddress);
