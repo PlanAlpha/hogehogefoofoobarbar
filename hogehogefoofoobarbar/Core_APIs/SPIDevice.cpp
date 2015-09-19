@@ -1,9 +1,8 @@
 #include "SPIDevice.h"
 #include <string.h>
-#include <usb_serial.h>
 #include <boards.h>
 
-SPIDevice::SPIDevice(Pin devIndex, Baud baud, Mode mode)
+SPIDevice::SPIDevice(Pin devIndex, Baud _baud, Mode _mode) : baud(_baud), mode(_mode), ss(devIndex == Pin::SPI1 ? BOARD_SPI1_NSS_PIN : BOARD_SPI2_NSS_PIN)
 {
     if (devIndex == Pin::SPI1) {
         dev = SPI1;
@@ -11,10 +10,36 @@ SPIDevice::SPIDevice(Pin devIndex, Baud baud, Mode mode)
         spi_master_enable(dev, static_cast<spi_baud_rate>(baud), static_cast<spi_mode>(mode), 0);
     } else {
         dev = SPI2;
-        spi_init(dev);
-        spi_gpio_cfg(true, PIN_MAP[31].gpio_device, PIN_MAP[31].gpio_bit, PIN_MAP[30].gpio_device, PIN_MAP[30].gpio_bit, PIN_MAP[29].gpio_bit, PIN_MAP[28].gpio_bit);
-        spi_master_enable(dev, static_cast<spi_baud_rate>(baud), static_cast<spi_mode>(mode), SPI_DFF_8_BIT | SPI_SW_SLAVE | SPI_SOFT_SS | SPI_FRAME_MSB);
+        spi_gpio_cfg(
+            true,
+            PIN_MAP[BOARD_SPI2_NSS_PIN].gpio_device,
+            PIN_MAP[BOARD_SPI2_NSS_PIN].gpio_bit,
+            PIN_MAP[BOARD_SPI2_SCK_PIN].gpio_device,
+            PIN_MAP[BOARD_SPI2_SCK_PIN].gpio_bit,
+            PIN_MAP[BOARD_SPI2_MISO_PIN].gpio_bit,
+            PIN_MAP[BOARD_SPI2_MOSI_PIN].gpio_bit
+        );
+        init();
     }
+}
+
+void SPIDevice::init()
+{
+    spi_init(dev);
+    spi_master_enable(dev, static_cast<spi_baud_rate>(baud), static_cast<spi_mode>(mode), SPI_DFF_8_BIT | SPI_SW_SLAVE | SPI_SOFT_SS | SPI_FRAME_MSB);
+}
+
+uint8_t SPIDevice::write(uint8_t data)
+{
+    init();
+    ss = 1;
+    ss = 0;
+    delayMicroseconds(100);
+    while (1) {
+        if (spi_tx(dev, &data, 1)) break;
+    }
+    while (! spi_is_rx_nonempty(dev)) ;
+    return spi_rx_reg(dev);
 }
 
 void SPIDevice::write(uint8_t reg, uint8_t data)
