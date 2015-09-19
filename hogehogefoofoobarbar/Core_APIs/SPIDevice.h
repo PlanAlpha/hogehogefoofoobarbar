@@ -36,7 +36,6 @@ private:
     
 public:
     SPIDevice(Pin dev, Baud baud, Mode mode);
-    uint8_t write(uint8_t data);
     void write(uint8_t reg, uint8_t data);
     void write(uint8_t reg, uint8_t *datas, uint32_t length);
     uint8_t read(uint8_t reg);
