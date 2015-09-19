@@ -5,9 +5,8 @@
 
 class PAL3G4200D {
     static constexpr uint8_t i2cAddress = 105;
-    static constexpr uint8_t whoAmI = 15;
+    static constexpr uint8_t WHO_AM_I = 15;
     static constexpr uint8_t CTRL_REG1 = 32;
-    static constexpr uint8_t PD = 3;
     static constexpr uint8_t CTRL_REG2 = 33;
     static constexpr uint8_t CTRL_REG3 = 34;
     static constexpr uint8_t CTRL_REG4 = 35;
@@ -22,7 +21,6 @@ class PAL3G4200D {
     
 public:
     PAL3G4200D(I2CDevice::Pin pin);
-    void init();
     int16_t readX();
     int16_t readY();
     int16_t readZ();

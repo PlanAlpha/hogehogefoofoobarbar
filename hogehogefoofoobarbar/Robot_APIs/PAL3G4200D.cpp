@@ -3,12 +3,8 @@
 
 PAL3G4200D::PAL3G4200D(I2CDevice::Pin pin) : device(pin, i2cAddress)
 {
-}
-
-void PAL3G4200D::init()
-{
     while (1) {
-        uint8_t who = device.read(whoAmI);
+        uint8_t who = device.read(WHO_AM_I);
         if (who != 211) {
             SerialUSB.print("error reading whoami ");
             SerialUSB.println(who, BIN);
@@ -17,14 +13,13 @@ void PAL3G4200D::init()
         }
     }
     
+    /* set the frequency to 800 Hz */
     /* disable sleep mode */
-    device.write(CTRL_REG1, 0b00001111);
+    device.write(CTRL_REG1, 0b11001111);
     
-    device.write(CTRL_REG2, 0);
-    
-    device.write(CTRL_REG3, 0b00001000);
-    
-    device.write(CTRL_REG4, (2 & 0x03) << 4);
+    /* set the bit order to MSB (big endian) */
+    /* set the full scale to 2000 dps */
+    device.write(CTRL_REG4, 0b01110000);
 }
 
 int16_t PAL3G4200D::readX()

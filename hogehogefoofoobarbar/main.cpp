@@ -11,10 +11,8 @@ int main(int __attribute__((unused)) argc, const char __attribute__((unused)) * 
     SerialUSB.read();
     PAL3G4200D gyro(I2CDevice::Pin::I2C1);
     GC6050 gyroAccel(I2CDevice::Pin::I2C1, false);
-    gyro.init();
     while (1) {
-        gyroAccel.updateValues();
-        SerialUSB.print(gyroAccel.gyroZ()); SerialUSB.print(" "); SerialUSB.println(gyro.readZ());
+        SerialUSB.println(gyro.readZ());
     }
     
     return 0;
