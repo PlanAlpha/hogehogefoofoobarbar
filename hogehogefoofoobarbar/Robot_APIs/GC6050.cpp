@@ -56,3 +56,36 @@ void GC6050::setOffsets()
     gyroOffsets.y  = currentGyroValue.y;
     gyroOffsets.z  = currentGyroValue.z;
 }
+
+void GC6050::calibrate()
+{
+    constexpr int numOfGetValues = 100;
+    AccelValue accel = {0, 0, 0};
+    GyroValue gyro = {0, 0, 0};
+    accelOffsets = accel;
+    gyroOffsets = gyro;
+    
+    int i = numOfGetValues;
+    do {
+        updateValues();
+        
+        accel.x += currentAccelValue.x;
+        accel.y += currentAccelValue.y;
+        accel.z += currentAccelValue.z;
+        
+        gyro.x += currentGyroValue.x;
+        gyro.y += currentGyroValue.y;
+        gyro.z += currentGyroValue.z;
+    } while (--i);
+    
+    accelOffsets = {
+        accel.x / numOfGetValues,
+        accel.y / numOfGetValues,
+        accel.z / numOfGetValues
+    };
+    gyroOffsets = {
+        gyro.x / numOfGetValues,
+        gyro.y / numOfGetValues,
+        gyro.z / numOfGetValues
+    };
+}

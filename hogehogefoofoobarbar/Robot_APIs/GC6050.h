@@ -55,6 +55,7 @@ public:
         return currentGyroValue.z;
     }
     void setOffsets();
+    void calibrate();
 };
 
 #endif
