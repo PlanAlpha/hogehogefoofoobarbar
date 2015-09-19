@@ -16,7 +16,7 @@ class PAL3G4200D {
     I2CDevice device;
     union Data {
         uint8_t buf[2];
-        uint16_t value;
+        int16_t value;
     };
     
 public:
