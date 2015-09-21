@@ -32,7 +32,6 @@
 class DigitalIn {
     volatile uint32_t *IDR;
     uint32_t bit;
-    stm32_pin_info info;
     
 public:
     /** Create a DigitalIn connected to the specified pin
@@ -61,11 +60,6 @@ public:
      * @param timeout (optional) Timeout value as microseconds
      */
     uint32_t readPulse(uint8_t state, uint32_t timeout = 100000);
-    /** Set the input pin mode
-     *
-     *  @param mode INPUT, INPUT_FLOATING, INPUT_PULLUP, INPUT_PULLDOWN
-     */
-    void mode(WiringPinMode mode);
 };
 
 #endif

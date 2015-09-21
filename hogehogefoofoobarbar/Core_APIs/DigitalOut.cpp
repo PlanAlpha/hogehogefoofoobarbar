@@ -4,9 +4,9 @@ DigitalOut::DigitalOut(uint8_t pin, WiringPinMode mode)
 {
     ASSERT(pin < BOARD_NR_GPIO_PINS);
     
-    stm32_pin_info info = PIN_MAP[pin];
-    gpio_dev *dev = info.gpio_device;
-    uint8_t channel = info.gpio_bit;
+    const stm32_pin_info *info = PIN_MAP + pin;
+    gpio_dev *dev = info->gpio_device;
+    uint8_t channel = info->gpio_bit;
     gpio_reg_map *regs = dev->regs;
     ODR = reinterpret_cast<volatile uint32_t *>(&regs->ODR);
     BSRR = reinterpret_cast<volatile uint32_t *>(&regs->BSRR);
@@ -29,7 +29,7 @@ DigitalOut::DigitalOut(uint8_t pin, WiringPinMode mode)
     }
     
     gpio_set_mode(dev, channel, pinmode);
-    if (info.timer_device) {
-        timer_set_mode(info.timer_device, info.timer_channel, TIMER_DISABLED);
+    if (info->timer_device) {
+        timer_set_mode(info->timer_device, info->timer_channel, TIMER_DISABLED);
     }
 }
