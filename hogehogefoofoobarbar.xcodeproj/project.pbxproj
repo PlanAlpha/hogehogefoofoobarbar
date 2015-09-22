@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE1EB5F31BB0FBDF005A77FF /* GCMotor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1EB5F11BB0FBDF005A77FF /* GCMotor.cpp */; settings = {ASSET_TAGS = (); }; };
 		CE2C0F451BA98D3D00936DF7 /* I2CDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE2C0F431BA98D3D00936DF7 /* I2CDevice.cpp */; };
 		CE2C0F481BA98D4C00936DF7 /* GCADJD.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE2C0F461BA98D4C00936DF7 /* GCADJD.cpp */; };
 		CE2C0F4B1BA98D5700936DF7 /* GC6050.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE2C0F491BA98D5700936DF7 /* GC6050.cpp */; };
@@ -25,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE1EB5F11BB0FBDF005A77FF /* GCMotor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GCMotor.cpp; sourceTree = "<group>"; };
+		CE1EB5F21BB0FBDF005A77FF /* GCMotor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCMotor.h; sourceTree = "<group>"; };
 		CE2C0F3F1BA983B100936DF7 /* MapleMini.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = MapleMini.xcconfig; sourceTree = "<group>"; };
 		CE2C0F431BA98D3D00936DF7 /* I2CDevice.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = I2CDevice.cpp; sourceTree = "<group>"; };
 		CE2C0F441BA98D3D00936DF7 /* I2CDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = I2CDevice.h; sourceTree = "<group>"; };
@@ -115,6 +118,8 @@
 				CE344BCA1BB0340B00FAE93B /* PALineSensor.cpp */,
 				CE344BC81BB0336000FAE93B /* PAThreeLineSensors.h */,
 				CE344BC71BB0336000FAE93B /* PAThreeLineSensors.cpp */,
+				CE1EB5F21BB0FBDF005A77FF /* GCMotor.h */,
+				CE1EB5F11BB0FBDF005A77FF /* GCMotor.cpp */,
 			);
 			path = Robot_APIs;
 			sourceTree = "<group>";
@@ -371,6 +376,7 @@
 				CE7F90161BAACF9600BB3895 /* SPIDevice.cpp in Sources */,
 				CEAB79DD1BA94C1C001F320B /* GCSonicSensor.cpp in Sources */,
 				CEAB79DB1BA94C1C001F320B /* DigitalInOut.cpp in Sources */,
+				CE1EB5F31BB0FBDF005A77FF /* GCMotor.cpp in Sources */,
 				CEAB79D91BA94C1C001F320B /* AnalogIn.cpp in Sources */,
 				CE344BCC1BB0340B00FAE93B /* PALineSensor.cpp in Sources */,
 				CE2C0F481BA98D4C00936DF7 /* GCADJD.cpp in Sources */,
