@@ -2,6 +2,7 @@
 #define __PAPIDController__
 
 #include <stdint.h>
+#include <limits>
 
 class PAPIDController {
     const float Kp;
@@ -13,8 +14,12 @@ class PAPIDController {
     float lastError = 0;
     
 public:
-    PAPIDController(float Kp, float Ki, float Kd);
+    PAPIDController(float Kp, float Ki, float Kd, float integrationLimit = std::numeric_limits<float>::max());
     float next(float error);
+    void resetIntegrationValue() {
+        integrationValue = 0;
+    }
+    void initialize();
 };
 
 #endif

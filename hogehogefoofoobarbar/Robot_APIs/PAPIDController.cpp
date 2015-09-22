@@ -1,8 +1,7 @@
 #include "PAPIDController.h"
 #include <wirish_time.h>
-#include <limits>
 
-PAPIDController::PAPIDController(float _Kp, float _Ki, float _Kd) : Kp(_Kp), Ki(_Ki), Kd(_Kd), integrationLimit(std::numeric_limits<float>::max())
+PAPIDController::PAPIDController(float _Kp, float _Ki, float _Kd, float limit) : Kp(_Kp), Ki(_Ki), Kd(_Kd), integrationLimit(limit)
 {
     lastTime = millis();
 }
@@ -21,4 +20,11 @@ float PAPIDController::next(float error)
     lastTime += delta_t;
     
     return Kp * error + Ki * integrationValue + Kd * diff / delta_t;
+}
+
+void PAPIDController::initialize()
+{
+    integrationValue = 0;
+    lastError = 0;
+    lastTime = millis();
 }
