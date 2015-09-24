@@ -7,5 +7,5 @@ PAThreeLineSensors::PAThreeLineSensors(PALineSensor *_left, PALineSensor *_cente
 
 PAThreeLineSensors::Sensors PAThreeLineSensors::read()
 {
-    return *left | *center << 1 | *right << 1;
+    return *left | *center << 1 | *right << 2;
 }
