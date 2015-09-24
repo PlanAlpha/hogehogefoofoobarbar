@@ -21,7 +21,6 @@
 {
     {
         PAMovingAverage<int16_t, 10> average;
-        average.initialize(0);
         for (int i = 0; i < 100; i++) {
             switch (arc4random_uniform(3)) {
                 case 0:
@@ -45,7 +44,6 @@
     
     {
         PAMovingAverage<float, 10> average;
-        average.initialize(0);
         for (int i = 0; i < 100; i++) {
             switch (arc4random_uniform(3)) {
                 case 0:
