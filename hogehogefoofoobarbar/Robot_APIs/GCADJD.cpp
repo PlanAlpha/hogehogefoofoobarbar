@@ -37,5 +37,5 @@ GCADJD::GCADJDValue GCADJD::read()
 bool GCADJD::isGreen()
 {
     GCADJDValue value = read();
-    return value.green > value.red && value.green > value.blue;
+    return value.red < 850 && value.green > 1000 && value.blue < 850;
 }
