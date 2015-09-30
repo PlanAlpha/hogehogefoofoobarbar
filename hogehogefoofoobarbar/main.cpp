@@ -8,6 +8,8 @@
 #include "Core_APIs/PwmOut.h"
 #include <limits>
 #include "GCADJD.h"
+#include "GCMotor.h"
+#include "Core_APIs/AnalogIn.h"
 
 int main(int __attribute__((unused)) argc, const char __attribute__((unused)) * argv[])
 {
@@ -15,6 +17,20 @@ int main(int __attribute__((unused)) argc, const char __attribute__((unused)) * 
     SerialUSB.begin();
 	
 	GCADJD color(I2CDevice::Pin::I2C2);
+	
+	AnalogIn pin1(3);
+	AnalogIn pin2(4);
+	AnalogIn pin3(5);
+	AnalogIn pin4(6);
+	AnalogIn pin5(7);
+	
+	while (1) {
+		SerialUSB.print(pin1); SerialUSB.print(" ");
+		SerialUSB.print(pin2); SerialUSB.print(" ");
+		SerialUSB.print(pin3); SerialUSB.print(" ");
+		SerialUSB.print(pin4); SerialUSB.print(" ");
+		SerialUSB.println(pin5);
+	}
 	
 	while (1) {
 		//this function dont work ;(
