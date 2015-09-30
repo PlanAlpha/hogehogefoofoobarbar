@@ -33,3 +33,9 @@ GCADJD::GCADJDValue GCADJD::read()
         data.values[3]
     };
 }
+
+bool GCADJD::isGreen()
+{
+    GCADJDValue value = read();
+    return value.green > value.red && value.green > value.blue;
+}

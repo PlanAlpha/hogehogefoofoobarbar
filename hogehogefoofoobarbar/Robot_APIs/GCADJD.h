@@ -51,6 +51,7 @@ public:
     
     GCADJD(I2CDevice::Pin pin);
     GCADJDValue read();
+    bool isGreen();
 };
 
 #endif
