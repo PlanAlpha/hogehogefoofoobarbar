@@ -17,6 +17,7 @@ int main(int __attribute__((unused)) argc, const char __attribute__((unused)) * 
 	GCADJD color(I2CDevice::Pin::I2C2);
 	
 	while (1) {
+		//this function dont work ;(
 		SerialUSB.println(color.isGreen());
 	}
 	
