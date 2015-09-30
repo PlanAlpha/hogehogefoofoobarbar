@@ -7,11 +7,19 @@
 #include "Core_APIs/SPIDevice.h"
 #include "Core_APIs/PwmOut.h"
 #include <limits>
+#include "GCADJD.h"
 
 int main(int __attribute__((unused)) argc, const char __attribute__((unused)) * argv[])
 {
     init();
     SerialUSB.begin();
+	
+	GCADJD color(I2CDevice::Pin::I2C2);
+	
+	while (1) {
+		SerialUSB.println(color.isGreen());
+	}
+	
     PwmOut led(BOARD_LED_PIN);
     led = 0;
     const char msg[] = "Hello! this is Maple Mini!\n";
@@ -36,9 +44,4 @@ int main(int __attribute__((unused)) argc, const char __attribute__((unused)) * 
     }
     
     return 0;
-}
-
-
-void commitTest() {
-	//hogehogefoofoobarbar
 }
