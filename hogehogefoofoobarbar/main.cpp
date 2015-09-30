@@ -37,3 +37,8 @@ int main(int __attribute__((unused)) argc, const char __attribute__((unused)) * 
     
     return 0;
 }
+
+
+void commitTest() {
+	//hogehogefoofoobarbar
+}
