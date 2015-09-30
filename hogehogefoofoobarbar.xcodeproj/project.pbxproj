@@ -16,6 +16,7 @@
 		CE344BCC1BB0340B00FAE93B /* PALineSensor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE344BCA1BB0340B00FAE93B /* PALineSensor.cpp */; settings = {ASSET_TAGS = (); }; };
 		CE4372111BAD2A1800B28B0D /* hogehogefoofoobarbarTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE4372101BAD2A1800B28B0D /* hogehogefoofoobarbarTest.mm */; };
 		CE7F90161BAACF9600BB3895 /* SPIDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE7F90141BAACF9600BB3895 /* SPIDevice.cpp */; };
+		CEAB22EC1BBB96BE00F7B863 /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = CEAB22EA1BBB96BE00F7B863 /* Makefile */; settings = {ASSET_TAGS = (); }; };
 		CEAB79AD1BA949CE001F320B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEAB79AC1BA949CE001F320B /* main.cpp */; };
 		CEAB79D91BA94C1C001F320B /* AnalogIn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEAB79C91BA94C1C001F320B /* AnalogIn.cpp */; };
 		CEAB79DA1BA94C1C001F320B /* DigitalIn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEAB79CB1BA94C1C001F320B /* DigitalIn.cpp */; };
@@ -48,6 +49,8 @@
 		CE4372121BAD2A1800B28B0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE7F90141BAACF9600BB3895 /* SPIDevice.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SPIDevice.cpp; sourceTree = "<group>"; };
 		CE7F90151BAACF9600BB3895 /* SPIDevice.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = SPIDevice.h; sourceTree = "<group>"; };
+		CEAB22EA1BBB96BE00F7B863 /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		CEAB22EB1BBB96BE00F7B863 /* reset.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = reset.py; sourceTree = "<group>"; };
 		CEAB79A91BA949CE001F320B /* Index */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Index; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEAB79AC1BA949CE001F320B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		CEAB79C91BA94C1C001F320B /* AnalogIn.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AnalogIn.cpp; sourceTree = "<group>"; };
@@ -172,6 +175,8 @@
 				CE2C0F3D1BA9835D00936DF7 /* Core_APIs */,
 				CEAB79AC1BA949CE001F320B /* main.cpp */,
 				CE2C0F3F1BA983B100936DF7 /* MapleMini.xcconfig */,
+				CEAB22EA1BBB96BE00F7B863 /* Makefile */,
+				CEAB22EB1BBB96BE00F7B863 /* reset.py */,
 			);
 			path = hogehogefoofoobarbar;
 			sourceTree = "<group>";
@@ -377,6 +382,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE2C0F4B1BA98D5700936DF7 /* GC6050.cpp in Sources */,
+				CEAB22EC1BBB96BE00F7B863 /* Makefile in Sources */,
 				CEAB79AD1BA949CE001F320B /* main.cpp in Sources */,
 				CE7F90161BAACF9600BB3895 /* SPIDevice.cpp in Sources */,
 				CEAB79DD1BA94C1C001F320B /* GCSonicSensor.cpp in Sources */,
