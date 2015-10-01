@@ -16,6 +16,7 @@
 		CE344BCC1BB0340B00FAE93B /* PALineSensor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE344BCA1BB0340B00FAE93B /* PALineSensor.cpp */; settings = {ASSET_TAGS = (); }; };
 		CE4372111BAD2A1800B28B0D /* hogehogefoofoobarbarTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE4372101BAD2A1800B28B0D /* hogehogefoofoobarbarTest.mm */; };
 		CE7F90161BAACF9600BB3895 /* SPIDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE7F90141BAACF9600BB3895 /* SPIDevice.cpp */; };
+		CE815BD71BBCCBA900603994 /* PlanAlpha.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE815BD51BBCCBA900603994 /* PlanAlpha.cpp */; settings = {ASSET_TAGS = (); }; };
 		CEAB22EC1BBB96BE00F7B863 /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = CEAB22EA1BBB96BE00F7B863 /* Makefile */; settings = {ASSET_TAGS = (); }; };
 		CEAB79AD1BA949CE001F320B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEAB79AC1BA949CE001F320B /* main.cpp */; };
 		CEAB79D91BA94C1C001F320B /* AnalogIn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEAB79C91BA94C1C001F320B /* AnalogIn.cpp */; };
@@ -49,6 +50,8 @@
 		CE4372121BAD2A1800B28B0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE7F90141BAACF9600BB3895 /* SPIDevice.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SPIDevice.cpp; sourceTree = "<group>"; };
 		CE7F90151BAACF9600BB3895 /* SPIDevice.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = SPIDevice.h; sourceTree = "<group>"; };
+		CE815BD51BBCCBA900603994 /* PlanAlpha.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlanAlpha.cpp; sourceTree = "<group>"; };
+		CE815BD61BBCCBA900603994 /* PlanAlpha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlanAlpha.h; sourceTree = "<group>"; };
 		CEAB22EA1BBB96BE00F7B863 /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 		CEAB22EB1BBB96BE00F7B863 /* reset.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = reset.py; sourceTree = "<group>"; };
 		CEAB79A91BA949CE001F320B /* Index */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Index; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -173,6 +176,8 @@
 				CE2C0F421BA98CF900936DF7 /* Libraries */,
 				CE2C0F411BA9853700936DF7 /* Robot_APIs */,
 				CE2C0F3D1BA9835D00936DF7 /* Core_APIs */,
+				CE815BD61BBCCBA900603994 /* PlanAlpha.h */,
+				CE815BD51BBCCBA900603994 /* PlanAlpha.cpp */,
 				CEAB79AC1BA949CE001F320B /* main.cpp */,
 				CE2C0F3F1BA983B100936DF7 /* MapleMini.xcconfig */,
 				CEAB22EA1BBB96BE00F7B863 /* Makefile */,
@@ -394,6 +399,7 @@
 				CE2C0F481BA98D4C00936DF7 /* GCADJD.cpp in Sources */,
 				CE344BC91BB0336000FAE93B /* PAThreeLineSensors.cpp in Sources */,
 				CE2C0F451BA98D3D00936DF7 /* I2CDevice.cpp in Sources */,
+				CE815BD71BBCCBA900603994 /* PlanAlpha.cpp in Sources */,
 				CEAB79DA1BA94C1C001F320B /* DigitalIn.cpp in Sources */,
 				CEAB79DC1BA94C1C001F320B /* DigitalOut.cpp in Sources */,
 				CEAB79DE1BA94C1C001F320B /* PwmOut.cpp in Sources */,
