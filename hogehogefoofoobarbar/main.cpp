@@ -2,11 +2,15 @@
 
 #include <usb_serial.h>
 #include "DigitalIn.h"
-
+#include "Core_APIs/InterruptIn.h"
+#include <limits>
 using namespace PlanAlpha;
 
 int main(int __attribute__((unused)) argc, const char __attribute__((unused)) * argv[])
 {
+
+	delay(2000);
+	speaker.play(400, std::numeric_limits<uint16_t>::max()/2, 1000);
     
 //    pinMode(8, PWM);
 //    pinMode(9, PWM);
@@ -17,6 +21,7 @@ int main(int __attribute__((unused)) argc, const char __attribute__((unused)) * 
 	SerialUSB.begin();
 	DigitalIn touch(19);
 	DigitalIn touch2(18);
+	
 	while (1) {
 //		SerialUSB.print(forwardLineSensors.read() & PAThreeLineSensors::Left);
 		SerialUSB.print(forwardLeftLineSensor.readRawValue());
