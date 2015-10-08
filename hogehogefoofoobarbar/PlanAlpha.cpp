@@ -1,7 +1,7 @@
 #include "PlanAlpha.h"
 #include <limits>
 
-PASpeaker<25>      *PlanAlpha::speaker = nullptr;
+PASpeaker<25>      PlanAlpha::speaker;
 //GCADJD             PlanAlpha::leftColorSensor(I2CDevice::Pin::I2C2);
 //GCADJD             PlanAlpha::rightColorSensor(I2CDevice::Pin::I2C1);
 //GC6050             PlanAlpha::gyroAcceleroSensor(I2CDevice::Pin::I2C2);
@@ -115,96 +115,104 @@ struct Note {
 static void __attribute__((constructor)) initializer()
 {
     init();
-    
-    int duration = 250;
-    Note water_crown[] = {
-        {NOTE_C5, duration / 2},
-        {NOTE_G4, duration / 2},
-        {NOTE_C5, duration / 2},
-        {NOTE_E5, duration / 2},
-        {NOTE_A5, duration},
-        {NOTE_G5, duration},
-        {0, duration},
-        {NOTE_C6, duration / 2},
-        {NOTE_B6, duration / 2},
-        {NOTE_A6, duration / 2},
-        {NOTE_G5, duration / 2},
-        {NOTE_F5, duration / 2},
-        {NOTE_D5, duration / 2},
-        
-        {NOTE_C5, duration / 2},
-        {NOTE_G4, duration / 2},
-        {NOTE_C5, duration / 2},
-        {NOTE_E5, duration / 2},
-        {NOTE_A5, duration},
-        {NOTE_G5, duration},
-        {0, duration},
-        {NOTE_C6, duration / 2},
-        {NOTE_B6, duration / 2},
-        {NOTE_A6, duration / 2},
-        {NOTE_G5, duration / 2},
-        {NOTE_F5, duration / 2},
-        {NOTE_D5, duration / 2},
-        
-        {NOTE_C5, duration / 2},
-        {NOTE_G4, duration / 2},
-        {NOTE_C5, duration / 2},
-        {NOTE_E5, duration / 2},
-        {NOTE_A5, duration},
-        {NOTE_G5, duration},
-        {NOTE_D5, duration / 2},
-        {NOTE_F5, duration / 2},
-        {NOTE_A5, duration / 2},
-        {NOTE_C6, duration / 2},
-        {NOTE_B5, duration / 2},
-        {NOTE_G5, duration / 2},
-        {NOTE_B5, duration / 2},
-        {NOTE_G6, duration / 2},
-        
-        {NOTE_CS6, duration / 4},
-        {NOTE_A5, duration / 4},
-        {NOTE_CS6, duration / 4},
-        {NOTE_A5, duration / 4},
-        {NOTE_CS6, duration / 4},
-        {NOTE_A5, duration / 4},
-        {NOTE_CS6, duration / 4},
-        {NOTE_A5, duration / 4},
-        {NOTE_CS6, duration / 4},
-        {NOTE_A5, duration / 4},
-        {NOTE_CS6, duration / 4},
-        {NOTE_A5, duration / 4},
-        {NOTE_CS6, duration / 4},
-        {NOTE_A5, duration / 4},
-        {NOTE_CS6, duration / 4},
-        {NOTE_A5, duration / 4},
-        {NOTE_CS6, duration / 4},
-        {NOTE_A5, duration / 4},
-        {NOTE_CS6, duration / 4},
-        {NOTE_A5, duration / 4},
-        {NOTE_CS6, duration / 4},
-        {NOTE_A5, duration / 4},
-        {NOTE_CS6, duration / 4},
-        {NOTE_A5, duration / 4},
-        {NOTE_CS6, duration / 4},
-        {NOTE_A5, duration / 4},
-        {NOTE_CS6, duration / 4},
-        {NOTE_A5, duration / 4},
-        {NOTE_CS6, duration / 4},
-        {NOTE_A5, duration / 4},
-        {NOTE_CS6, duration / 4},
-        {NOTE_A5, duration / 4},
-        {NOTE_CS6, duration / 4},
-    };
-    
-    PASpeaker<25> speaker;
-    PlanAlpha::speaker = &speaker;
-    for (unsigned int i = 0; i < sizeof(water_crown) / sizeof(water_crown[0]); i++) {
-        if (water_crown[i].note) {
-            PlanAlpha::speaker->play(
-                water_crown[i].note, std::numeric_limits<uint16_t>::max() / 2, water_crown[i].duration
-            );
-        }
-        delay(water_crown[i].duration + 10);
-    }
-    PlanAlpha::speaker->play(0, 0, 0);
 }
+
+class Initializer {
+    
+    
+public:
+    Initializer() {
+        int duration = 250;
+        Note water_crown[] = {
+            {NOTE_C5, duration / 2},
+            {NOTE_G4, duration / 2},
+            {NOTE_C5, duration / 2},
+            {NOTE_E5, duration / 2},
+            {NOTE_A5, duration},
+            {NOTE_G5, duration},
+            {0, duration},
+            {NOTE_C6, duration / 2},
+            {NOTE_B6, duration / 2},
+            {NOTE_A6, duration / 2},
+            {NOTE_G5, duration / 2},
+            {NOTE_F5, duration / 2},
+            {NOTE_D5, duration / 2},
+            
+            {NOTE_C5, duration / 2},
+            {NOTE_G4, duration / 2},
+            {NOTE_C5, duration / 2},
+            {NOTE_E5, duration / 2},
+            {NOTE_A5, duration},
+            {NOTE_G5, duration},
+            {0, duration},
+            {NOTE_C6, duration / 2},
+            {NOTE_B6, duration / 2},
+            {NOTE_A6, duration / 2},
+            {NOTE_G5, duration / 2},
+            {NOTE_F5, duration / 2},
+            {NOTE_D5, duration / 2},
+            
+            {NOTE_C5, duration / 2},
+            {NOTE_G4, duration / 2},
+            {NOTE_C5, duration / 2},
+            {NOTE_E5, duration / 2},
+            {NOTE_A5, duration},
+            {NOTE_G5, duration},
+            {NOTE_D5, duration / 2},
+            {NOTE_F5, duration / 2},
+            {NOTE_A5, duration / 2},
+            {NOTE_C6, duration / 2},
+            {NOTE_B5, duration / 2},
+            {NOTE_G5, duration / 2},
+            {NOTE_B5, duration / 2},
+            {NOTE_G6, duration / 2},
+            
+            {NOTE_CS6, duration / 4},
+            {NOTE_A5, duration / 4},
+            {NOTE_CS6, duration / 4},
+            {NOTE_A5, duration / 4},
+            {NOTE_CS6, duration / 4},
+            {NOTE_A5, duration / 4},
+            {NOTE_CS6, duration / 4},
+            {NOTE_A5, duration / 4},
+            {NOTE_CS6, duration / 4},
+            {NOTE_A5, duration / 4},
+            {NOTE_CS6, duration / 4},
+            {NOTE_A5, duration / 4},
+            {NOTE_CS6, duration / 4},
+            {NOTE_A5, duration / 4},
+            {NOTE_CS6, duration / 4},
+            {NOTE_A5, duration / 4},
+            {NOTE_CS6, duration / 4},
+            {NOTE_A5, duration / 4},
+            {NOTE_CS6, duration / 4},
+            {NOTE_A5, duration / 4},
+            {NOTE_CS6, duration / 4},
+            {NOTE_A5, duration / 4},
+            {NOTE_CS6, duration / 4},
+            {NOTE_A5, duration / 4},
+            {NOTE_CS6, duration / 4},
+            {NOTE_A5, duration / 4},
+            {NOTE_CS6, duration / 4},
+            {NOTE_A5, duration / 4},
+            {NOTE_CS6, duration / 4},
+            {NOTE_A5, duration / 4},
+            {NOTE_CS6, duration / 4},
+            {NOTE_A5, duration / 4},
+            {NOTE_CS6, duration / 4},
+        };
+        
+        PASpeaker<25> speaker;
+        for (unsigned int i = 0; i < sizeof(water_crown) / sizeof(water_crown[0]); i++) {
+            if (water_crown[i].note) {
+                PlanAlpha::speaker.play(
+                    water_crown[i].note, std::numeric_limits<uint16_t>::max() / 2, water_crown[i].duration
+                );
+            }
+            delay(water_crown[i].duration + 10);
+        }
+        PlanAlpha::speaker.play(0, 0, 0);
+    }
+};
+
+static Initializer dummy;

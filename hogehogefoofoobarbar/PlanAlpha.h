@@ -56,7 +56,7 @@
 #include "Robot_APIs/GCMotor.h"
 
 namespace PlanAlpha {
-    extern PASpeaker<25>      *speaker;
+    extern PASpeaker<25>      speaker;
     extern GCADJD             leftColorSensor;
     extern GCADJD             rightColorSensor;
     extern GC6050             gyroAcceleroSensor;
