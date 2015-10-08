@@ -1,7 +1,7 @@
 #include "PlanAlpha.h"
 #include <limits>
 
-PASpeaker<25>      PlanAlpha::speaker;
+PASpeaker<25>      *PlanAlpha::speaker = nullptr;
 //GCADJD             PlanAlpha::leftColorSensor(I2CDevice::Pin::I2C2);
 //GCADJD             PlanAlpha::rightColorSensor(I2CDevice::Pin::I2C1);
 //GC6050             PlanAlpha::gyroAcceleroSensor(I2CDevice::Pin::I2C2);
@@ -196,14 +196,15 @@ static void __attribute__((constructor)) initializer()
         {NOTE_CS6, duration / 4},
     };
     
-    PlanAlpha::speaker = PASpeaker<25>();
+    PASpeaker<25> speaker;
+    PlanAlpha::speaker = &speaker;
     for (unsigned int i = 0; i < sizeof(water_crown) / sizeof(water_crown[0]); i++) {
         if (water_crown[i].note) {
-            PlanAlpha::speaker.play(
+            PlanAlpha::speaker->play(
                 water_crown[i].note, std::numeric_limits<uint16_t>::max() / 2, water_crown[i].duration
             );
         }
         delay(water_crown[i].duration + 10);
     }
-    PlanAlpha::speaker.play(0, 0, 0);
+    PlanAlpha::speaker->play(0, 0, 0);
 }
