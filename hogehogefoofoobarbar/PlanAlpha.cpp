@@ -10,7 +10,11 @@ PALineSensor       PlanAlpha::forwardCenterLineSensor(4, 1000);
 PALineSensor       PlanAlpha::forwardRightLineSensor(3, 1000);
 PALineSensor       PlanAlpha::middleLeftLineSensor(6, 1000);
 PALineSensor       PlanAlpha::middleRightLineSensor(7, 1000);
-PAThreeLineSensors PlanAlpha::forwardLineSensors(&forwardLeftLineSensor, &forwardCenterLineSensor, &forwardRightLineSensor);
+PAThreeLineSensors PlanAlpha::forwardLineSensors(
+                        &forwardLeftLineSensor, &forwardCenterLineSensor, &forwardRightLineSensor
+                   );
+GCMotor            PlanAlpha::leftMotor(10, 11);
+GCMotor            PlanAlpha::rightMotor(9, 10);
 
 static void __attribute__((constructor)) initializer()
 {

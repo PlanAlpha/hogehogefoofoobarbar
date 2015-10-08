@@ -66,6 +66,8 @@ namespace PlanAlpha {
     extern PALineSensor       middleLeftLineSensor;
     extern PALineSensor       middleRightLineSensor;
     extern PAThreeLineSensors forwardLineSensors;
+    extern GCMotor            leftMotor;
+    extern GCMotor            rightMotor;
 }
 
 #endif
