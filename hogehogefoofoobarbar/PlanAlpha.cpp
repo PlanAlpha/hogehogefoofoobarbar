@@ -1,5 +1,6 @@
 #include "PlanAlpha.h"
 #include <limits>
+#include <stdlib.h>
 
 PASpeaker<25>      PlanAlpha::speaker;
 //GCADJD             PlanAlpha::leftColorSensor(I2CDevice::Pin::I2C2);
@@ -122,9 +123,31 @@ static void __attribute__((constructor)) initializer()
     init();
 }
 
-#define duration 250
+#define duration 300
+Note __FLASH__ kougen[] = {
+    {NOTE_B4, duration * 2},
+    {NOTE_B4, duration},
+    {NOTE_D5, duration},
+    {NOTE_G5, duration * 2},
+    {NOTE_B4, duration * 2},
+    
+    {NOTE_C5, duration * 2},
+    {NOTE_C5, duration},
+    {NOTE_E5, duration},
+    {NOTE_G5, duration * 2},
+    {NOTE_C5, duration * 2},
+    
+    {NOTE_D5, duration * 2},
+    {NOTE_D5, duration},
+    {NOTE_FS5, duration},
+    {NOTE_A5, duration * 2},
+    {NOTE_FS5, duration * 2},
+    {NOTE_G5, duration * 2},
+};
+#undef duration
 
-static const Note __FLASH__ water_crown[] = {
+#define duration 250
+Note __FLASH__ water_crown[] = {
     {NOTE_C5, duration / 2},
     {NOTE_G4, duration / 2},
     {NOTE_C5, duration / 2},
@@ -203,18 +226,444 @@ static const Note __FLASH__ water_crown[] = {
     {NOTE_CS6, duration / 4},
 };
 
+Note __FLASH__ farewell[] = {
+    {NOTE_F5, duration},
+    {NOTE_F4, duration},
+    {NOTE_C5, duration},
+    {NOTE_F4, duration},
+    
+    {NOTE_C5, duration},
+    {NOTE_F5, duration},
+    {NOTE_E5, duration},
+    {NOTE_D5, duration},
+    
+    {NOTE_E5, duration},
+    {NOTE_E4, duration},
+    {NOTE_B4, duration},
+    {NOTE_E4, duration},
+    
+    {NOTE_C5, duration},
+    {NOTE_E5, duration},
+    {NOTE_D5, duration},
+    {NOTE_C5, duration},
+    
+    {NOTE_D5, duration},
+    {NOTE_D4, duration},
+    {NOTE_A4, duration},
+    {NOTE_G4, duration},
+    
+    {NOTE_D5, duration},
+    {NOTE_C5, duration},
+    {NOTE_D4, duration},
+    {NOTE_B4, duration},
+    
+    {NOTE_C5, duration},
+    {0, duration},
+    {NOTE_C4, duration},
+    {0, duration},
+    
+    {NOTE_G3, duration / 4},
+    {NOTE_C4, duration / 4},
+    {NOTE_E4, duration / 4},
+    {NOTE_G4, duration / 4},
+    {NOTE_C5, duration / 4},
+    {NOTE_E5, duration / 4},
+    {NOTE_G5, duration / 4},
+    {NOTE_C6, duration / 4},
+};
+
+Note __FLASH__ jr_sh1_1[] = {
+    {NOTE_C4, duration},
+    {NOTE_G4, duration},
+    {NOTE_C5, duration},
+    {NOTE_D5, duration},
+    {NOTE_E5, duration},
+    {NOTE_G4, duration},
+    {NOTE_C5, duration},
+    {NOTE_G4, duration},
+    
+    {NOTE_F5, duration},
+    {NOTE_E5, duration},
+    {NOTE_D5, duration},
+    {NOTE_C5, duration},
+    {NOTE_B4, duration},
+    {NOTE_C5, duration},
+    {NOTE_D5, duration},
+    {NOTE_B4, duration},
+    
+    {NOTE_C5, duration},
+    {NOTE_G4, duration},
+    {NOTE_C5, duration},
+    {NOTE_D5, duration},
+    {NOTE_E5, duration},
+    {NOTE_G4, duration},
+    {NOTE_C5, duration},
+    {NOTE_G4, duration},
+    
+    {NOTE_A5, duration},
+    {NOTE_G5, duration},
+    {NOTE_F5, duration},
+    {NOTE_E5, duration},
+    {NOTE_D4, duration},
+    {NOTE_E5, duration},
+    {NOTE_F5, duration},
+    {NOTE_D4, duration},
+    
+    {NOTE_E5, duration * 2},
+    {NOTE_G5, duration * 2},
+    {NOTE_C6, duration * 4},
+};
+
+Note __FLASH__ jr_sh3_3[] = {
+    {NOTE_E5, duration},
+    {NOTE_DS5, duration},
+    {NOTE_B4, duration},
+    {NOTE_GS4, duration},
+    {NOTE_FS4, duration},
+    {NOTE_E4, duration},
+    {NOTE_B3, duration},
+    {NOTE_E4, duration},
+    {NOTE_E3, duration},
+    {NOTE_GS4, duration},
+    {NOTE_B4, duration},
+    {NOTE_DS5, duration},
+    {NOTE_E5, duration},
+    {NOTE_DS5, duration},
+    {NOTE_B4, duration},
+    {NOTE_GS4, duration},
+    
+    {NOTE_FS5, duration},
+    {NOTE_D5, duration},
+    {NOTE_B4, duration},
+    {NOTE_A4, duration},
+    {NOTE_A4, duration},
+    {NOTE_G4, duration},
+    {NOTE_D4, duration},
+    {NOTE_G4, duration},
+    {NOTE_G3, duration},
+    {NOTE_FS5, duration},
+    {NOTE_G5, duration},
+    {NOTE_FS5, duration},
+    {NOTE_G5, duration},
+    {NOTE_FS5, duration},
+    {NOTE_D5, duration},
+    {NOTE_B4, duration},
+    {NOTE_C5, duration / 4},
+    {NOTE_A5, duration},
+};
+
+Note __FLASH__ toi_aozora[] {
+    {NOTE_F5, duration},
+    {NOTE_F5, duration},
+    {NOTE_F5, duration},
+    {NOTE_F5, duration},
+    {NOTE_G5, duration},
+    {NOTE_A5, duration * 2},
+    {0, duration},
+    
+    {NOTE_E5, duration},
+    {NOTE_E5, duration},
+    {NOTE_E5, duration},
+    {NOTE_E5, duration},
+    {NOTE_F5, duration},
+    {NOTE_G5, duration * 2},
+    {0, duration},
+    
+    {NOTE_D5, duration},
+    {NOTE_D5, duration},
+    {NOTE_D5, duration},
+    {NOTE_D5, duration},
+    {NOTE_G5, duration},
+    {NOTE_F5, duration},
+    {NOTE_B5, duration * 2},
+    
+    {NOTE_C5, duration / 2},
+    {NOTE_F5, duration / 2},
+    {NOTE_G5, duration / 2},
+    {NOTE_C6, duration * 2},
+};
+
+Note __FLASH__ ogawa_no_seseragi[] = {
+    {NOTE_C6, duration},
+    {NOTE_C5, duration},
+    {NOTE_E5, duration},
+    {NOTE_G5, duration},
+    {NOTE_C5, duration},
+    {NOTE_E5, duration},
+    
+    {NOTE_C6, duration},
+    {NOTE_C5, duration},
+    {NOTE_E5, duration},
+    {NOTE_G5, duration},
+    {NOTE_C5, duration},
+    {NOTE_E5, duration},
+    
+    {NOTE_A4, duration},
+    {NOTE_C5, duration},
+    {NOTE_E5, duration},
+    {NOTE_D5, duration},
+    {NOTE_F5, duration},
+    {NOTE_A5, duration},
+    
+    {NOTE_C5, duration / 2},
+    {NOTE_E5, duration / 2},
+    {NOTE_G5, duration / 2},
+    {NOTE_C6, duration * 3},
+};
 #undef duration
+
+#define duration 170
+Note __FLASH__ harumachikaze[] = {
+    {NOTE_G4, duration},
+    {NOTE_C5, duration},
+    {NOTE_F5, duration},
+    {NOTE_G5, duration},
+    {NOTE_G4, duration},
+    {NOTE_C5, duration},
+    {NOTE_F5, duration},
+    {NOTE_G5, duration},
+    
+    {NOTE_C5, duration},
+    {NOTE_E5, duration},
+    {NOTE_G5, duration},
+    {NOTE_B5, duration},
+    {NOTE_C5, duration},
+    {NOTE_E5, duration},
+    {NOTE_G5, duration},
+    {NOTE_B5, duration},
+    
+    {NOTE_D5, duration},
+    {NOTE_G5, duration},
+    {NOTE_B5, duration},
+    {NOTE_C6, duration},
+    {NOTE_D5, duration},
+    {NOTE_G5, duration},
+    {NOTE_B5, duration},
+    {NOTE_C6, duration},
+    
+    {NOTE_A3, duration / 2},
+    {NOTE_C4, duration / 2},
+    {NOTE_E4, duration / 2},
+    {NOTE_A4, duration / 2},
+    {NOTE_C5, duration / 2},
+    {NOTE_E5, duration / 2},
+    {NOTE_A5, duration / 2},
+    {NOTE_C6, duration / 2},
+    {NOTE_E6, duration / 2},
+};
+#undef duration
+
+#define duration 300
+Note __FLASH__ springbox[] = {
+    {NOTE_G4, duration},
+    {NOTE_E5, duration},
+    {NOTE_D5, duration},
+    {NOTE_C5, duration},
+    {NOTE_B4, duration},
+    {NOTE_A4, duration},
+    {NOTE_GS4, duration * 2},
+    
+    {NOTE_A4, duration},
+    {NOTE_A5, duration},
+    {NOTE_G5, duration},
+    {NOTE_F5, duration},
+    {NOTE_E5, duration},
+    {NOTE_D5, duration},
+    {NOTE_E5, duration * 2},
+    
+    {NOTE_F5, duration},
+    {NOTE_C5, duration},
+    {NOTE_C5, duration},
+    {NOTE_F5, duration},
+    {NOTE_E5, duration},
+    {NOTE_D5, duration},
+    {NOTE_C5, duration},
+    {NOTE_B4, duration},
+    {NOTE_C5, duration * 4},
+};
+#undef duration
+
+#define duration 300
+Note __FLASH__ mellow_time[] = {
+    {NOTE_D5, duration},
+    {NOTE_A4, duration / 2},
+    {NOTE_CS5, duration},
+    {NOTE_FS4, duration / 2},
+    {NOTE_FS5, duration / 2},
+    {NOTE_E5, duration},
+    
+    {NOTE_D5, duration},
+    {NOTE_CS5, duration},
+    {NOTE_A4, duration / 2},
+    {NOTE_E5, duration / 2},
+    {NOTE_D5, duration / 2},
+    
+    {NOTE_D5, duration},
+    {NOTE_A4, duration / 2},
+    {NOTE_G4, duration / 2},
+    {NOTE_FS4, duration / 2},
+    {NOTE_G4, duration / 2},
+    {NOTE_A4, duration / 2},
+    
+    {NOTE_A4, duration},
+    {NOTE_B4, duration},
+    {NOTE_E5, duration / 2},
+    {NOTE_D5, duration},
+    {NOTE_CS5, duration / 2},
+    {NOTE_D5, duration / 2},
+    
+    {NOTE_D5, duration},
+    {NOTE_A4, duration / 2},
+    {NOTE_CS5, duration},
+    {NOTE_FS4, duration / 2},
+    {NOTE_FS5, duration / 2},
+    {NOTE_E5, duration},
+    
+    {NOTE_B4, duration},
+    {NOTE_CS5, duration / 2},
+    {NOTE_FS4, duration / 2},
+    {NOTE_A4, duration / 2},
+    {NOTE_CS5, duration},
+    {NOTE_D5, duration * 2},
+};
+
+Note __FLASH__ matataku_machinami[] = {
+    {NOTE_C5, duration},
+    {NOTE_F5, duration / 2},
+    {NOTE_A5, duration / 2},
+    {NOTE_C5, duration},
+    {NOTE_F5, duration / 2},
+    {NOTE_A5, duration / 2},
+    {NOTE_C5, duration},
+    {NOTE_F5, duration / 2},
+    {NOTE_A5, duration / 2},
+    {NOTE_C5, duration},
+    {NOTE_F5, duration / 2},
+    {NOTE_A5, duration / 2},
+    
+    {NOTE_F6, duration / 2},
+    {NOTE_D6, duration / 2},
+    {NOTE_B5, duration / 2},
+    {NOTE_F5, duration / 2},
+    {NOTE_F6, duration / 2},
+    {NOTE_D6, duration / 2},
+    {NOTE_B5, duration / 2},
+    {NOTE_F5, duration / 2},
+    {NOTE_E6, duration / 2},
+    {NOTE_C6, duration / 2},
+    {NOTE_G5, duration / 2},
+    {NOTE_E5, duration / 2},
+    {NOTE_C5, duration / 2},
+    {NOTE_E5, duration / 2},
+    {NOTE_G5, duration / 2},
+    {NOTE_C6, duration / 2},
+    
+    {NOTE_C5, duration},
+    {NOTE_F5, duration / 2},
+    {NOTE_A5, duration / 2},
+    {NOTE_C5, duration},
+    {NOTE_F5, duration / 2},
+    {NOTE_A5, duration / 2},
+    {NOTE_C5, duration},
+    {NOTE_F5, duration / 2},
+    {NOTE_A5, duration / 2},
+    {NOTE_C5, duration},
+    {NOTE_F5, duration / 2},
+    {NOTE_A5, duration / 2},
+    
+    {NOTE_A5, static_cast<int>(duration * 1.5)},
+    {NOTE_G5, static_cast<int>(duration * 1.5)},
+    {NOTE_F5, static_cast<int>(duration * 1.5)},
+    {NOTE_E5, static_cast<int>(duration * 1.5)},
+};
+#undef duration
+
+#define duration 200
+Note __FLASH__ jr_sh2_2[] = {
+    {NOTE_A4, duration},
+    {NOTE_C5, duration},
+    {NOTE_F5, duration},
+    {NOTE_E5, duration},
+    {NOTE_F5, duration * 2},
+    {NOTE_C5, duration * 2},
+    
+    {NOTE_D5, duration},
+    {NOTE_G5, duration},
+    {NOTE_F5, duration},
+    {NOTE_E5, duration},
+    {NOTE_D5, duration},
+    {NOTE_E5, duration},
+    {NOTE_C5, duration},
+    {NOTE_C5, duration},
+    
+    {NOTE_C5, duration},
+    {NOTE_DS5, duration},
+    {NOTE_GS5, duration},
+    {NOTE_G5, duration},
+    {NOTE_GS5, duration * 2},
+    {NOTE_DS5, duration * 2},
+    
+    {NOTE_D5, duration},
+    {NOTE_F5, duration},
+    {NOTE_AS5, duration},
+    {NOTE_GS5, duration},
+    {NOTE_G5, duration},
+    {NOTE_F5, duration},
+    {NOTE_G5, duration},
+    {NOTE_DS5, duration},
+    
+    {NOTE_GS5, duration},
+    {NOTE_DS5, duration},
+    {NOTE_CS5, duration},
+    {NOTE_DS5, duration},
+    {NOTE_C5, duration * 4},
+};
+#undef duration
+
+Note __FLASH__ *songs[] = {
+    kougen,
+    water_crown,
+    farewell,
+    jr_sh1_1,
+    jr_sh3_3,
+    toi_aozora,
+    ogawa_no_seseragi,
+    harumachikaze,
+    springbox,
+    mellow_time,
+    matataku_machinami,
+    jr_sh2_2,
+};
+
+unsigned int __FLASH__ song_sizes[] = {
+    sizeof(kougen) / sizeof(kougen[0]),
+    sizeof(water_crown) / sizeof(water_crown[0]),
+    sizeof(farewell) / sizeof(farewell[0]),
+    sizeof(jr_sh1_1) / sizeof(jr_sh1_1[0]),
+    sizeof(jr_sh3_3) / sizeof(jr_sh3_3[0]),
+    sizeof(toi_aozora) / sizeof(toi_aozora[0]),
+    sizeof(ogawa_no_seseragi) / sizeof(ogawa_no_seseragi[0]),
+    sizeof(harumachikaze) / sizeof(harumachikaze[0]),
+    sizeof(springbox) / sizeof(springbox[0]),
+    sizeof(mellow_time) / sizeof(mellow_time[0]),
+    sizeof(matataku_machinami) / sizeof(matataku_machinami[0]),
+    sizeof(jr_sh2_2) / sizeof(jr_sh2_2[0]),
+};
 
 class Initializer {
 public:
     Initializer() {
-        for (unsigned int i = 0; i < sizeof(water_crown) / sizeof(water_crown[0]); i++) {
-            if (water_crown[i].note) {
+        srand(PlanAlpha::forwardCenterLineSensor.readRawValue());
+        int num = static_cast<int>(rand() * (sizeof(song_sizes) / sizeof(song_sizes[0]) + 1.0) / (1.0 + RAND_MAX));
+        const Note *song = songs[num];
+        int size = song_sizes[num];
+        for (int i = 0; i < size; i++) {
+            if (song[i].note) {
                 PlanAlpha::speaker.play(
-                    water_crown[i].note, std::numeric_limits<uint16_t>::max() / 2, water_crown[i].duration
-                );
+                                        song[i].note, std::numeric_limits<uint16_t>::max() / 2, song[i].duration
+                                        );
             }
-            delay(water_crown[i].duration + 10);
+            delay(song[i].duration + 10);
         }
         PlanAlpha::speaker.play(350, 0, 0);
     }

@@ -8,7 +8,6 @@ using namespace PlanAlpha;
 
 int main(int __attribute__((unused)) argc, const char __attribute__((unused)) * argv[])
 {
-
 	delay(2000);
 	speaker.play(400, std::numeric_limits<uint16_t>::max()/2, 1000);
     
