@@ -665,7 +665,6 @@ public:
             }
             delay(song[i].duration + 10);
         }
-        PlanAlpha::speaker.play(350, 0, 0);
     }
 };
 
