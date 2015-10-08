@@ -196,6 +196,7 @@ static void __attribute__((constructor)) initializer()
         {NOTE_CS6, duration / 4},
     };
     
+    PlanAlpha::speaker = PASpeaker<25>();
     for (unsigned int i = 0; i < sizeof(water_crown) / sizeof(water_crown[0]); i++) {
         if (water_crown[i].note) {
             PlanAlpha::speaker.play(
