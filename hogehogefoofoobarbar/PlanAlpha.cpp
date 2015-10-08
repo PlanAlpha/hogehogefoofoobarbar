@@ -107,6 +107,11 @@ GCMotor            PlanAlpha::rightMotor(8, 9);
 #define NOTE_D8  4699
 #define NOTE_DS8 4978
 
+#ifdef __clang__
+#   undef  __FLASH__
+#   define __FLASH__
+#endif
+
 struct Note {
     int note;
     int duration;
@@ -117,89 +122,92 @@ static void __attribute__((constructor)) initializer()
     init();
 }
 
+#define duration 250
+
+static const Note __FLASH__ water_crown[] = {
+    {NOTE_C5, duration / 2},
+    {NOTE_G4, duration / 2},
+    {NOTE_C5, duration / 2},
+    {NOTE_E5, duration / 2},
+    {NOTE_A5, duration},
+    {NOTE_G5, duration},
+    {0, duration},
+    {NOTE_C6, duration / 2},
+    {NOTE_B6, duration / 2},
+    {NOTE_A6, duration / 2},
+    {NOTE_G5, duration / 2},
+    {NOTE_F5, duration / 2},
+    {NOTE_D5, duration / 2},
+    
+    {NOTE_C5, duration / 2},
+    {NOTE_G4, duration / 2},
+    {NOTE_C5, duration / 2},
+    {NOTE_E5, duration / 2},
+    {NOTE_A5, duration},
+    {NOTE_G5, duration},
+    {0, duration},
+    {NOTE_C6, duration / 2},
+    {NOTE_B6, duration / 2},
+    {NOTE_A6, duration / 2},
+    {NOTE_G5, duration / 2},
+    {NOTE_F5, duration / 2},
+    {NOTE_D5, duration / 2},
+    
+    {NOTE_C5, duration / 2},
+    {NOTE_G4, duration / 2},
+    {NOTE_C5, duration / 2},
+    {NOTE_E5, duration / 2},
+    {NOTE_A5, duration},
+    {NOTE_G5, duration},
+    {NOTE_D5, duration / 2},
+    {NOTE_F5, duration / 2},
+    {NOTE_A5, duration / 2},
+    {NOTE_C6, duration / 2},
+    {NOTE_B5, duration / 2},
+    {NOTE_G5, duration / 2},
+    {NOTE_B5, duration / 2},
+    {NOTE_G6, duration / 2},
+    
+    {NOTE_CS6, duration / 4},
+    {NOTE_A5, duration / 4},
+    {NOTE_CS6, duration / 4},
+    {NOTE_A5, duration / 4},
+    {NOTE_CS6, duration / 4},
+    {NOTE_A5, duration / 4},
+    {NOTE_CS6, duration / 4},
+    {NOTE_A5, duration / 4},
+    {NOTE_CS6, duration / 4},
+    {NOTE_A5, duration / 4},
+    {NOTE_CS6, duration / 4},
+    {NOTE_A5, duration / 4},
+    {NOTE_CS6, duration / 4},
+    {NOTE_A5, duration / 4},
+    {NOTE_CS6, duration / 4},
+    {NOTE_A5, duration / 4},
+    {NOTE_CS6, duration / 4},
+    {NOTE_A5, duration / 4},
+    {NOTE_CS6, duration / 4},
+    {NOTE_A5, duration / 4},
+    {NOTE_CS6, duration / 4},
+    {NOTE_A5, duration / 4},
+    {NOTE_CS6, duration / 4},
+    {NOTE_A5, duration / 4},
+    {NOTE_CS6, duration / 4},
+    {NOTE_A5, duration / 4},
+    {NOTE_CS6, duration / 4},
+    {NOTE_A5, duration / 4},
+    {NOTE_CS6, duration / 4},
+    {NOTE_A5, duration / 4},
+    {NOTE_CS6, duration / 4},
+    {NOTE_A5, duration / 4},
+    {NOTE_CS6, duration / 4},
+};
+
+#undef duration
+
 class Initializer {
 public:
     Initializer() {
-        int duration = 250;
-        Note water_crown[] = {
-            {NOTE_C5, duration / 2},
-            {NOTE_G4, duration / 2},
-            {NOTE_C5, duration / 2},
-            {NOTE_E5, duration / 2},
-            {NOTE_A5, duration},
-            {NOTE_G5, duration},
-            {0, duration},
-            {NOTE_C6, duration / 2},
-            {NOTE_B6, duration / 2},
-            {NOTE_A6, duration / 2},
-            {NOTE_G5, duration / 2},
-            {NOTE_F5, duration / 2},
-            {NOTE_D5, duration / 2},
-            
-            {NOTE_C5, duration / 2},
-            {NOTE_G4, duration / 2},
-            {NOTE_C5, duration / 2},
-            {NOTE_E5, duration / 2},
-            {NOTE_A5, duration},
-            {NOTE_G5, duration},
-            {0, duration},
-            {NOTE_C6, duration / 2},
-            {NOTE_B6, duration / 2},
-            {NOTE_A6, duration / 2},
-            {NOTE_G5, duration / 2},
-            {NOTE_F5, duration / 2},
-            {NOTE_D5, duration / 2},
-            
-            {NOTE_C5, duration / 2},
-            {NOTE_G4, duration / 2},
-            {NOTE_C5, duration / 2},
-            {NOTE_E5, duration / 2},
-            {NOTE_A5, duration},
-            {NOTE_G5, duration},
-            {NOTE_D5, duration / 2},
-            {NOTE_F5, duration / 2},
-            {NOTE_A5, duration / 2},
-            {NOTE_C6, duration / 2},
-            {NOTE_B5, duration / 2},
-            {NOTE_G5, duration / 2},
-            {NOTE_B5, duration / 2},
-            {NOTE_G6, duration / 2},
-            
-            {NOTE_CS6, duration / 4},
-            {NOTE_A5, duration / 4},
-            {NOTE_CS6, duration / 4},
-            {NOTE_A5, duration / 4},
-            {NOTE_CS6, duration / 4},
-            {NOTE_A5, duration / 4},
-            {NOTE_CS6, duration / 4},
-            {NOTE_A5, duration / 4},
-            {NOTE_CS6, duration / 4},
-            {NOTE_A5, duration / 4},
-            {NOTE_CS6, duration / 4},
-            {NOTE_A5, duration / 4},
-            {NOTE_CS6, duration / 4},
-            {NOTE_A5, duration / 4},
-            {NOTE_CS6, duration / 4},
-            {NOTE_A5, duration / 4},
-            {NOTE_CS6, duration / 4},
-            {NOTE_A5, duration / 4},
-            {NOTE_CS6, duration / 4},
-            {NOTE_A5, duration / 4},
-            {NOTE_CS6, duration / 4},
-            {NOTE_A5, duration / 4},
-            {NOTE_CS6, duration / 4},
-            {NOTE_A5, duration / 4},
-            {NOTE_CS6, duration / 4},
-            {NOTE_A5, duration / 4},
-            {NOTE_CS6, duration / 4},
-            {NOTE_A5, duration / 4},
-            {NOTE_CS6, duration / 4},
-            {NOTE_A5, duration / 4},
-            {NOTE_CS6, duration / 4},
-            {NOTE_A5, duration / 4},
-            {NOTE_CS6, duration / 4},
-        };
-        
         for (unsigned int i = 0; i < sizeof(water_crown) / sizeof(water_crown[0]); i++) {
             if (water_crown[i].note) {
                 PlanAlpha::speaker.play(
@@ -208,7 +216,7 @@ public:
             }
             delay(water_crown[i].duration + 10);
         }
-        PlanAlpha::speaker.play(0, 0, 0);
+        PlanAlpha::speaker.play(350, 0, 0);
     }
 };
 
