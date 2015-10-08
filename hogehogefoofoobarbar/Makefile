@@ -19,7 +19,7 @@ LINKER_SCRIPT = -T/Applications/MapleIDE.app/Contents/Resources/Java/hardware/le
 AR      = $(GCC_BIN)arm-none-eabi-ar
 AS      = $(GCC_BIN)arm-none-eabi-gcc
 CC      = $(GCC_BIN)arm-none-eabi-gcc
-CPP     = /Users/user/Documents/arm-none-eabi-gcc/bin/arm-none-eabi-g++
+CPP     = /Users/ryosuke/Develop/gcc-arm-none-eabi-4_9-2015q2/bin/arm-none-eabi-g++
 LD      = $(GCC_BIN)arm-none-eabi-g++
 OBJCOPY = $(GCC_BIN)arm-none-eabi-objcopy
 OBJDUMP = $(GCC_BIN)arm-none-eabi-objdump
@@ -66,6 +66,8 @@ build: createObjDir $(OBJDIR)/$(PROJECT).bin
 
 upload:
 	@echo "Upload"
+	screen -d || true
+	screen -r -X quit || true
 	python ./reset.py && \
 	sleep 1 && \
 	$(DFU) -a1 -R -d $(BOARD_USB_VENDOR_ID):$(BOARD_USB_PRODUCT_ID) -D $(OBJDIR)/$(PROJECT).bin

@@ -7,17 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CE1EB5F31BB0FBDF005A77FF /* GCMotor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1EB5F11BB0FBDF005A77FF /* GCMotor.cpp */; settings = {ASSET_TAGS = (); }; };
-		CE1EB5F61BB1057B005A77FF /* PAPIDController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1EB5F41BB1057B005A77FF /* PAPIDController.cpp */; settings = {ASSET_TAGS = (); }; };
+		CE1EB5F31BB0FBDF005A77FF /* GCMotor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1EB5F11BB0FBDF005A77FF /* GCMotor.cpp */; };
+		CE1EB5F61BB1057B005A77FF /* PAPIDController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1EB5F41BB1057B005A77FF /* PAPIDController.cpp */; };
 		CE2C0F451BA98D3D00936DF7 /* I2CDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE2C0F431BA98D3D00936DF7 /* I2CDevice.cpp */; };
 		CE2C0F481BA98D4C00936DF7 /* GCADJD.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE2C0F461BA98D4C00936DF7 /* GCADJD.cpp */; };
 		CE2C0F4B1BA98D5700936DF7 /* GC6050.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE2C0F491BA98D5700936DF7 /* GC6050.cpp */; };
-		CE344BC91BB0336000FAE93B /* PAThreeLineSensors.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE344BC71BB0336000FAE93B /* PAThreeLineSensors.cpp */; settings = {ASSET_TAGS = (); }; };
-		CE344BCC1BB0340B00FAE93B /* PALineSensor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE344BCA1BB0340B00FAE93B /* PALineSensor.cpp */; settings = {ASSET_TAGS = (); }; };
+		CE344BC91BB0336000FAE93B /* PAThreeLineSensors.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE344BC71BB0336000FAE93B /* PAThreeLineSensors.cpp */; };
+		CE344BCC1BB0340B00FAE93B /* PALineSensor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE344BCA1BB0340B00FAE93B /* PALineSensor.cpp */; };
 		CE4372111BAD2A1800B28B0D /* hogehogefoofoobarbarTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE4372101BAD2A1800B28B0D /* hogehogefoofoobarbarTest.mm */; };
 		CE7F90161BAACF9600BB3895 /* SPIDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE7F90141BAACF9600BB3895 /* SPIDevice.cpp */; };
-		CE815BD71BBCCBA900603994 /* PlanAlpha.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE815BD51BBCCBA900603994 /* PlanAlpha.cpp */; settings = {ASSET_TAGS = (); }; };
-		CEAB22EC1BBB96BE00F7B863 /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = CEAB22EA1BBB96BE00F7B863 /* Makefile */; settings = {ASSET_TAGS = (); }; };
+		CE815BD71BBCCBA900603994 /* PlanAlpha.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE815BD51BBCCBA900603994 /* PlanAlpha.cpp */; };
+		CEAB22EC1BBB96BE00F7B863 /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = CEAB22EA1BBB96BE00F7B863 /* Makefile */; };
 		CEAB79AD1BA949CE001F320B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEAB79AC1BA949CE001F320B /* main.cpp */; };
 		CEAB79D91BA94C1C001F320B /* AnalogIn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEAB79C91BA94C1C001F320B /* AnalogIn.cpp */; };
 		CEAB79DA1BA94C1C001F320B /* DigitalIn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEAB79CB1BA94C1C001F320B /* DigitalIn.cpp */; };
@@ -52,7 +52,7 @@
 		CE7F90151BAACF9600BB3895 /* SPIDevice.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = SPIDevice.h; sourceTree = "<group>"; };
 		CE815BD51BBCCBA900603994 /* PlanAlpha.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlanAlpha.cpp; sourceTree = "<group>"; };
 		CE815BD61BBCCBA900603994 /* PlanAlpha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlanAlpha.h; sourceTree = "<group>"; };
-		CEAB22EA1BBB96BE00F7B863 /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		CEAB22EA1BBB96BE00F7B863 /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.simpleColoring; };
 		CEAB22EB1BBB96BE00F7B863 /* reset.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = reset.py; sourceTree = "<group>"; };
 		CEAB79A91BA949CE001F320B /* Index */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Index; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEAB79AC1BA949CE001F320B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
