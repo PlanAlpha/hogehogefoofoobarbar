@@ -1,63 +1,19 @@
-#include "Robot_APIs/PAL3G4200D.h"
-#include "Robot_APIs/GC6050.h"
-#include <boards.h>
-#include <usb_serial.h>
-#include <HardwareSPI.h>
-#include <wirish_time.h>
-#include "Core_APIs/SPIDevice.h"
-#include "Core_APIs/PwmOut.h"
+#include <wirish.h>
+#include <i2c.h>
 #include <limits>
-#include "GCADJD.h"
-#include "GCMotor.h"
-#include "Core_APIs/AnalogIn.h"
+#include <stdint.h>
+#undef max
+#include "PlanAlpha.h"
 
 int main(int __attribute__((unused)) argc, const char __attribute__((unused)) * argv[])
 {
-    init();
-    SerialUSB.begin();
-	
-	GCADJD color(I2CDevice::Pin::I2C2);
-	
-	AnalogIn pin1(3);
-	AnalogIn pin2(4);
-	AnalogIn pin3(5);
-	AnalogIn pin4(6);
-	AnalogIn pin5(7);
-	
-	while (1) {
-		SerialUSB.print(pin1); SerialUSB.print(" ");
-		SerialUSB.print(pin2); SerialUSB.print(" ");
-		SerialUSB.print(pin3); SerialUSB.print(" ");
-		SerialUSB.print(pin4); SerialUSB.print(" ");
-		SerialUSB.println(pin5);
-	}
-	
-	while (1) {
-		//this function dont work ;(
-		SerialUSB.println(color.isGreen());
-	}
-	
-    PwmOut led(BOARD_LED_PIN);
-    led = 0;
-    const char msg[] = "Hello! this is Maple Mini!\n";
-    SPIDevice arduino(SPIDevice::Pin::SPI1, SPIDevice::Baud::B_1_125MHz, SPIDevice::Mode::Mode0);
+    
+//    pinMode(8, PWM);
+//    pinMode(9, PWM);
+//    pwmWrite(8, 0);
+//    pwmWrite(9, std::numeric_limits<uint16_t>::max() / 2);
+    PlanAlpha::rightMotor.forward(0.2);
     while (1) {
-        for (uint16_t i = 1; i < std::numeric_limits<uint16_t>::max();) {
-            for (char c : msg) {
-                if (c == '\0') break;
-                if (arduino.read(c) == 1 && c == '\n') {
-                    led = ++i;
-                }
-            }
-        }
-        for (uint16_t i = std::numeric_limits<uint16_t>::max(); i > 0;) {
-            for (char c : msg) {
-                if (c == '\0') break;
-                if (arduino.read(c) == 1 && c == '\n') {
-                    led = --i;
-                }
-            }
-        }
     }
     
     return 0;

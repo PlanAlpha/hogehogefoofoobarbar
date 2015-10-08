@@ -10,10 +10,10 @@ void GCMotor::forward(int32_t power)
 {
     if (power >= 0) {
         pin2 = 0;
-        pin1 = power;
+        pin1 = static_cast<uint16_t>(power);
     } else {
         pin1 = 0;
-        pin2 = -power;
+        pin2 = static_cast<uint16_t>(-power);
     }
 }
 
@@ -24,7 +24,7 @@ void GCMotor::forward(float power)
     } else if (power <= -1) {
         forward(std::numeric_limits<int32_t>::min());
     } else {
-        forward(static_cast<int32_t>(power * std::numeric_limits<int32_t>::max()));
+        forward(static_cast<int32_t>(power * std::numeric_limits<uint16_t>::max()));
     }
 }
 
