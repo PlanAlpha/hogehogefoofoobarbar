@@ -1,5 +1,9 @@
-hogehogefoofoobarbar/main.cpp
+#.gitignore
+
 .DS_Store
-hogehogefoofoobarbar.xcodeproj*
-hogehogefoofoobarbar.xcodeproj
 Makefile
+
+hogehogefoofoobarbar.xcodeproj/*
+!*.xcodeproj/project.pbxproj 
+!*.xcodeproj/default.*
+
