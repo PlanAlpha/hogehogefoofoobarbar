@@ -1,0 +1,693 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CE1EB5F31BB0FBDF005A77FF /* GCMotor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1EB5F11BB0FBDF005A77FF /* GCMotor.cpp */; };
+		CE1EB5F61BB1057B005A77FF /* PAPIDController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1EB5F41BB1057B005A77FF /* PAPIDController.cpp */; };
+		CE2C0F451BA98D3D00936DF7 /* I2CDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE2C0F431BA98D3D00936DF7 /* I2CDevice.cpp */; };
+		CE2C0F481BA98D4C00936DF7 /* GCADJD.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE2C0F461BA98D4C00936DF7 /* GCADJD.cpp */; };
+		CE2C0F4B1BA98D5700936DF7 /* GC6050.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE2C0F491BA98D5700936DF7 /* GC6050.cpp */; };
+		CE344BC91BB0336000FAE93B /* PAThreeLineSensors.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE344BC71BB0336000FAE93B /* PAThreeLineSensors.cpp */; };
+		CE344BCC1BB0340B00FAE93B /* PALineSensor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE344BCA1BB0340B00FAE93B /* PALineSensor.cpp */; };
+		CE4372111BAD2A1800B28B0D /* hogehogefoofoobarbarTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE4372101BAD2A1800B28B0D /* hogehogefoofoobarbarTest.mm */; };
+		CE7F90161BAACF9600BB3895 /* SPIDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE7F90141BAACF9600BB3895 /* SPIDevice.cpp */; };
+		CE815BD71BBCCBA900603994 /* PlanAlpha.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE815BD51BBCCBA900603994 /* PlanAlpha.cpp */; };
+		CEAB22EC1BBB96BE00F7B863 /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = CEAB22EA1BBB96BE00F7B863 /* Makefile */; };
+		CEAB79AD1BA949CE001F320B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEAB79AC1BA949CE001F320B /* main.cpp */; };
+		CEAB79D91BA94C1C001F320B /* AnalogIn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEAB79C91BA94C1C001F320B /* AnalogIn.cpp */; };
+		CEAB79DA1BA94C1C001F320B /* DigitalIn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEAB79CB1BA94C1C001F320B /* DigitalIn.cpp */; };
+		CEAB79DB1BA94C1C001F320B /* DigitalInOut.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEAB79CD1BA94C1C001F320B /* DigitalInOut.cpp */; };
+		CEAB79DC1BA94C1C001F320B /* DigitalOut.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEAB79CF1BA94C1C001F320B /* DigitalOut.cpp */; };
+		CEAB79DD1BA94C1C001F320B /* GCSonicSensor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEAB79D21BA94C1C001F320B /* GCSonicSensor.cpp */; };
+		CEAB79DE1BA94C1C001F320B /* PwmOut.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEAB79D51BA94C1C001F320B /* PwmOut.cpp */; };
+		CED95C2F1BAA84B2003974CD /* PAL3G4200D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED95C2D1BAA84B2003974CD /* PAL3G4200D.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CE1EB5F11BB0FBDF005A77FF /* GCMotor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GCMotor.cpp; sourceTree = "<group>"; };
+		CE1EB5F21BB0FBDF005A77FF /* GCMotor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCMotor.h; sourceTree = "<group>"; };
+		CE1EB5F41BB1057B005A77FF /* PAPIDController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PAPIDController.cpp; sourceTree = "<group>"; };
+		CE1EB5F51BB1057B005A77FF /* PAPIDController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAPIDController.h; sourceTree = "<group>"; };
+		CE2C0F3F1BA983B100936DF7 /* MapleMini.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = MapleMini.xcconfig; sourceTree = "<group>"; };
+		CE2C0F431BA98D3D00936DF7 /* I2CDevice.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = I2CDevice.cpp; sourceTree = "<group>"; };
+		CE2C0F441BA98D3D00936DF7 /* I2CDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = I2CDevice.h; sourceTree = "<group>"; };
+		CE2C0F461BA98D4C00936DF7 /* GCADJD.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GCADJD.cpp; sourceTree = "<group>"; };
+		CE2C0F471BA98D4C00936DF7 /* GCADJD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCADJD.h; sourceTree = "<group>"; };
+		CE2C0F491BA98D5700936DF7 /* GC6050.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GC6050.cpp; sourceTree = "<group>"; };
+		CE2C0F4A1BA98D5700936DF7 /* GC6050.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GC6050.h; sourceTree = "<group>"; };
+		CE344BC71BB0336000FAE93B /* PAThreeLineSensors.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PAThreeLineSensors.cpp; sourceTree = "<group>"; };
+		CE344BC81BB0336000FAE93B /* PAThreeLineSensors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAThreeLineSensors.h; sourceTree = "<group>"; };
+		CE344BCA1BB0340B00FAE93B /* PALineSensor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PALineSensor.cpp; sourceTree = "<group>"; };
+		CE344BCB1BB0340B00FAE93B /* PALineSensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PALineSensor.h; sourceTree = "<group>"; };
+		CE4372061BAD1C2300B28B0D /* PAMovingAverage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAMovingAverage.h; sourceTree = "<group>"; };
+		CE43720E1BAD2A1700B28B0D /* hogehogefoofoobarbarTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = hogehogefoofoobarbarTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE4372101BAD2A1800B28B0D /* hogehogefoofoobarbarTest.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = hogehogefoofoobarbarTest.mm; sourceTree = "<group>"; };
+		CE4372121BAD2A1800B28B0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE7F90141BAACF9600BB3895 /* SPIDevice.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SPIDevice.cpp; sourceTree = "<group>"; };
+		CE7F90151BAACF9600BB3895 /* SPIDevice.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = SPIDevice.h; sourceTree = "<group>"; };
+		CE815BD51BBCCBA900603994 /* PlanAlpha.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlanAlpha.cpp; sourceTree = "<group>"; };
+		CE815BD61BBCCBA900603994 /* PlanAlpha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlanAlpha.h; sourceTree = "<group>"; };
+		CEAB22EA1BBB96BE00F7B863 /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.simpleColoring; };
+		CEAB22EB1BBB96BE00F7B863 /* reset.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = reset.py; sourceTree = "<group>"; };
+		CEAB79A91BA949CE001F320B /* Index */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Index; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEAB79AC1BA949CE001F320B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		CEAB79C91BA94C1C001F320B /* AnalogIn.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AnalogIn.cpp; sourceTree = "<group>"; };
+		CEAB79CA1BA94C1C001F320B /* AnalogIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnalogIn.h; sourceTree = "<group>"; };
+		CEAB79CB1BA94C1C001F320B /* DigitalIn.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DigitalIn.cpp; sourceTree = "<group>"; };
+		CEAB79CC1BA94C1C001F320B /* DigitalIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DigitalIn.h; sourceTree = "<group>"; };
+		CEAB79CD1BA94C1C001F320B /* DigitalInOut.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DigitalInOut.cpp; sourceTree = "<group>"; };
+		CEAB79CE1BA94C1C001F320B /* DigitalInOut.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DigitalInOut.h; sourceTree = "<group>"; };
+		CEAB79CF1BA94C1C001F320B /* DigitalOut.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DigitalOut.cpp; sourceTree = "<group>"; };
+		CEAB79D01BA94C1C001F320B /* DigitalOut.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DigitalOut.h; sourceTree = "<group>"; };
+		CEAB79D11BA94C1C001F320B /* FunctionPointer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunctionPointer.h; sourceTree = "<group>"; };
+		CEAB79D21BA94C1C001F320B /* GCSonicSensor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GCSonicSensor.cpp; sourceTree = "<group>"; };
+		CEAB79D31BA94C1C001F320B /* GCSonicSensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCSonicSensor.h; sourceTree = "<group>"; };
+		CEAB79D41BA94C1C001F320B /* InterruptIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterruptIn.h; sourceTree = "<group>"; };
+		CEAB79D51BA94C1C001F320B /* PwmOut.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PwmOut.cpp; sourceTree = "<group>"; };
+		CEAB79D61BA94C1C001F320B /* PwmOut.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PwmOut.h; sourceTree = "<group>"; };
+		CEAB79D71BA94C1C001F320B /* Servo */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Servo; sourceTree = "<group>"; };
+		CEAB79D81BA94C1C001F320B /* PASpeaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PASpeaker.h; sourceTree = "<group>"; };
+		CED95C2D1BAA84B2003974CD /* PAL3G4200D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PAL3G4200D.cpp; sourceTree = "<group>"; };
+		CED95C2E1BAA84B2003974CD /* PAL3G4200D.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = PAL3G4200D.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CE43720B1BAD2A1700B28B0D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CE2C0F3D1BA9835D00936DF7 /* Core_APIs */ = {
+			isa = PBXGroup;
+			children = (
+				CEAB79D11BA94C1C001F320B /* FunctionPointer.h */,
+				CE2C0F441BA98D3D00936DF7 /* I2CDevice.h */,
+				CE2C0F431BA98D3D00936DF7 /* I2CDevice.cpp */,
+				CEAB79CA1BA94C1C001F320B /* AnalogIn.h */,
+				CEAB79C91BA94C1C001F320B /* AnalogIn.cpp */,
+				CEAB79CC1BA94C1C001F320B /* DigitalIn.h */,
+				CEAB79CB1BA94C1C001F320B /* DigitalIn.cpp */,
+				CEAB79CE1BA94C1C001F320B /* DigitalInOut.h */,
+				CEAB79CD1BA94C1C001F320B /* DigitalInOut.cpp */,
+				CEAB79D01BA94C1C001F320B /* DigitalOut.h */,
+				CEAB79CF1BA94C1C001F320B /* DigitalOut.cpp */,
+				CEAB79D41BA94C1C001F320B /* InterruptIn.h */,
+				CEAB79D61BA94C1C001F320B /* PwmOut.h */,
+				CEAB79D51BA94C1C001F320B /* PwmOut.cpp */,
+				CE7F90151BAACF9600BB3895 /* SPIDevice.h */,
+				CE7F90141BAACF9600BB3895 /* SPIDevice.cpp */,
+			);
+			path = Core_APIs;
+			sourceTree = "<group>";
+		};
+		CE2C0F411BA9853700936DF7 /* Robot_APIs */ = {
+			isa = PBXGroup;
+			children = (
+				CEAB79D31BA94C1C001F320B /* GCSonicSensor.h */,
+				CEAB79D21BA94C1C001F320B /* GCSonicSensor.cpp */,
+				CEAB79D81BA94C1C001F320B /* PASpeaker.h */,
+				CE2C0F471BA98D4C00936DF7 /* GCADJD.h */,
+				CE2C0F461BA98D4C00936DF7 /* GCADJD.cpp */,
+				CE2C0F4A1BA98D5700936DF7 /* GC6050.h */,
+				CE2C0F491BA98D5700936DF7 /* GC6050.cpp */,
+				CED95C2E1BAA84B2003974CD /* PAL3G4200D.h */,
+				CED95C2D1BAA84B2003974CD /* PAL3G4200D.cpp */,
+				CE4372061BAD1C2300B28B0D /* PAMovingAverage.h */,
+				CE344BCB1BB0340B00FAE93B /* PALineSensor.h */,
+				CE344BCA1BB0340B00FAE93B /* PALineSensor.cpp */,
+				CE344BC81BB0336000FAE93B /* PAThreeLineSensors.h */,
+				CE344BC71BB0336000FAE93B /* PAThreeLineSensors.cpp */,
+				CE1EB5F21BB0FBDF005A77FF /* GCMotor.h */,
+				CE1EB5F11BB0FBDF005A77FF /* GCMotor.cpp */,
+				CE1EB5F51BB1057B005A77FF /* PAPIDController.h */,
+				CE1EB5F41BB1057B005A77FF /* PAPIDController.cpp */,
+			);
+			path = Robot_APIs;
+			sourceTree = "<group>";
+		};
+		CE2C0F421BA98CF900936DF7 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				CEAB79D71BA94C1C001F320B /* Servo */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		CE43720F1BAD2A1800B28B0D /* hogehogefoofoobarbarTest */ = {
+			isa = PBXGroup;
+			children = (
+				CE4372101BAD2A1800B28B0D /* hogehogefoofoobarbarTest.mm */,
+				CE4372121BAD2A1800B28B0D /* Info.plist */,
+			);
+			path = hogehogefoofoobarbarTest;
+			sourceTree = "<group>";
+		};
+		CEAB799C1BA949CE001F320B = {
+			isa = PBXGroup;
+			children = (
+				CEAB79AB1BA949CE001F320B /* hogehogefoofoobarbar */,
+				CE43720F1BAD2A1800B28B0D /* hogehogefoofoobarbarTest */,
+				CEAB79AA1BA949CE001F320B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CEAB79AA1BA949CE001F320B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CEAB79A91BA949CE001F320B /* Index */,
+				CE43720E1BAD2A1700B28B0D /* hogehogefoofoobarbarTest.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CEAB79AB1BA949CE001F320B /* hogehogefoofoobarbar */ = {
+			isa = PBXGroup;
+			children = (
+				CE2C0F421BA98CF900936DF7 /* Libraries */,
+				CE2C0F411BA9853700936DF7 /* Robot_APIs */,
+				CE2C0F3D1BA9835D00936DF7 /* Core_APIs */,
+				CE815BD61BBCCBA900603994 /* PlanAlpha.h */,
+				CE815BD51BBCCBA900603994 /* PlanAlpha.cpp */,
+				CEAB79AC1BA949CE001F320B /* main.cpp */,
+				CE2C0F3F1BA983B100936DF7 /* MapleMini.xcconfig */,
+				CEAB22EA1BBB96BE00F7B863 /* Makefile */,
+				CEAB22EB1BBB96BE00F7B863 /* reset.py */,
+			);
+			path = hogehogefoofoobarbar;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		CEAB79A11BA949CE001F320B /* All */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "all -C \"$(PROJECT)\"";
+			buildConfigurationList = CEAB79B41BA949CE001F320B /* Build configuration list for PBXLegacyTarget "All" */;
+			buildPhases = (
+			);
+			buildToolPath = make;
+			dependencies = (
+			);
+			name = All;
+			passBuildSettingsInEnvironment = 1;
+			productName = All;
+		};
+		CEAB79A21BA949CE001F320B /* Build */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = build;
+			buildConfigurationList = CEAB79B71BA949CE001F320B /* Build configuration list for PBXLegacyTarget "Build" */;
+			buildPhases = (
+			);
+			buildToolPath = make;
+			buildWorkingDirectory = "$(PROJECT)";
+			dependencies = (
+			);
+			name = Build;
+			passBuildSettingsInEnvironment = 1;
+			productName = Build;
+		};
+		CEAB79A31BA949CE001F320B /* Upload */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "upload -C \"$(PROJECT)\"";
+			buildConfigurationList = CEAB79BA1BA949CE001F320B /* Build configuration list for PBXLegacyTarget "Upload" */;
+			buildPhases = (
+			);
+			buildToolPath = make;
+			dependencies = (
+			);
+			name = Upload;
+			passBuildSettingsInEnvironment = 1;
+			productName = Upload;
+		};
+		CEAB79A41BA949CE001F320B /* Build&Upload */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = buildAndUpload;
+			buildConfigurationList = CEAB79BD1BA949CE001F320B /* Build configuration list for PBXLegacyTarget "Build&Upload" */;
+			buildPhases = (
+			);
+			buildToolPath = make;
+			buildWorkingDirectory = "$(PROJECT)";
+			dependencies = (
+			);
+			name = "Build&Upload";
+			passBuildSettingsInEnvironment = 1;
+			productName = "Build&Upload";
+		};
+		CEAB79A51BA949CE001F320B /* Clean */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "clean -C \"$(PROJECT)\"";
+			buildConfigurationList = CEAB79C01BA949CE001F320B /* Build configuration list for PBXLegacyTarget "Clean" */;
+			buildPhases = (
+			);
+			buildToolPath = make;
+			dependencies = (
+			);
+			name = Clean;
+			passBuildSettingsInEnvironment = 1;
+			productName = Clean;
+		};
+		CEAB79A61BA949CE001F320B /* AllClean */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "allclean -C \"$(PROJECT)\"";
+			buildConfigurationList = CEAB79C31BA949CE001F320B /* Build configuration list for PBXLegacyTarget "AllClean" */;
+			buildPhases = (
+			);
+			buildToolPath = make;
+			dependencies = (
+			);
+			name = AllClean;
+			passBuildSettingsInEnvironment = 1;
+			productName = AllClean;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXNativeTarget section */
+		CE43720D1BAD2A1700B28B0D /* hogehogefoofoobarbarTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE4372131BAD2A1800B28B0D /* Build configuration list for PBXNativeTarget "hogehogefoofoobarbarTest" */;
+			buildPhases = (
+				CE43720A1BAD2A1700B28B0D /* Sources */,
+				CE43720B1BAD2A1700B28B0D /* Frameworks */,
+				CE43720C1BAD2A1700B28B0D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = hogehogefoofoobarbarTest;
+			productName = hogehogefoofoobarbarTest;
+			productReference = CE43720E1BAD2A1700B28B0D /* hogehogefoofoobarbarTest.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CEAB79A81BA949CE001F320B /* Index */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEAB79C61BA949CE001F320B /* Build configuration list for PBXNativeTarget "Index" */;
+			buildPhases = (
+				CEAB79A71BA949CE001F320B /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Index;
+			productName = Index;
+			productReference = CEAB79A91BA949CE001F320B /* Index */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CEAB799D1BA949CE001F320B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = PlanAlpha;
+				TargetAttributes = {
+					CE43720D1BAD2A1700B28B0D = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					CEAB79A11BA949CE001F320B = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					CEAB79A21BA949CE001F320B = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					CEAB79A31BA949CE001F320B = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					CEAB79A41BA949CE001F320B = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					CEAB79A51BA949CE001F320B = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					CEAB79A61BA949CE001F320B = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					CEAB79A81BA949CE001F320B = {
+						CreatedOnToolsVersion = 6.4;
+					};
+				};
+			};
+			buildConfigurationList = CEAB79A01BA949CE001F320B /* Build configuration list for PBXProject "hogehogefoofoobarbar" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CEAB799C1BA949CE001F320B;
+			productRefGroup = CEAB79AA1BA949CE001F320B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CEAB79A11BA949CE001F320B /* All */,
+				CEAB79A21BA949CE001F320B /* Build */,
+				CEAB79A31BA949CE001F320B /* Upload */,
+				CEAB79A41BA949CE001F320B /* Build&Upload */,
+				CEAB79A51BA949CE001F320B /* Clean */,
+				CEAB79A61BA949CE001F320B /* AllClean */,
+				CEAB79A81BA949CE001F320B /* Index */,
+				CE43720D1BAD2A1700B28B0D /* hogehogefoofoobarbarTest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CE43720C1BAD2A1700B28B0D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CE43720A1BAD2A1700B28B0D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE4372111BAD2A1800B28B0D /* hogehogefoofoobarbarTest.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEAB79A71BA949CE001F320B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE2C0F4B1BA98D5700936DF7 /* GC6050.cpp in Sources */,
+				CEAB22EC1BBB96BE00F7B863 /* Makefile in Sources */,
+				CEAB79AD1BA949CE001F320B /* main.cpp in Sources */,
+				CE7F90161BAACF9600BB3895 /* SPIDevice.cpp in Sources */,
+				CEAB79DD1BA94C1C001F320B /* GCSonicSensor.cpp in Sources */,
+				CEAB79DB1BA94C1C001F320B /* DigitalInOut.cpp in Sources */,
+				CE1EB5F31BB0FBDF005A77FF /* GCMotor.cpp in Sources */,
+				CE1EB5F61BB1057B005A77FF /* PAPIDController.cpp in Sources */,
+				CEAB79D91BA94C1C001F320B /* AnalogIn.cpp in Sources */,
+				CE344BCC1BB0340B00FAE93B /* PALineSensor.cpp in Sources */,
+				CE2C0F481BA98D4C00936DF7 /* GCADJD.cpp in Sources */,
+				CE344BC91BB0336000FAE93B /* PAThreeLineSensors.cpp in Sources */,
+				CE2C0F451BA98D3D00936DF7 /* I2CDevice.cpp in Sources */,
+				CE815BD71BBCCBA900603994 /* PlanAlpha.cpp in Sources */,
+				CEAB79DA1BA94C1C001F320B /* DigitalIn.cpp in Sources */,
+				CEAB79DC1BA94C1C001F320B /* DigitalOut.cpp in Sources */,
+				CEAB79DE1BA94C1C001F320B /* PwmOut.cpp in Sources */,
+				CED95C2F1BAA84B2003974CD /* PAL3G4200D.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		CE4372141BAD2A1800B28B0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = hogehogefoofoobarbarTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = PlanAlpha.hogehogefoofoobarbarTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		CE4372151BAD2A1800B28B0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				INFOPLIST_FILE = hogehogefoofoobarbarTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = PlanAlpha.hogehogefoofoobarbarTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		CEAB79B21BA949CE001F320B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE2C0F3F1BA983B100936DF7 /* MapleMini.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PATH = "$(PATH):$(PROJECT_DIR)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CEAB79B31BA949CE001F320B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PATH = "$(PATH):$(PROJECT_DIR)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		CEAB79B51BA949CE001F320B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CEAB79B61BA949CE001F320B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		CEAB79B81BA949CE001F320B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		CEAB79B91BA949CE001F320B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		CEAB79BB1BA949CE001F320B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		CEAB79BC1BA949CE001F320B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		CEAB79BE1BA949CE001F320B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		CEAB79BF1BA949CE001F320B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		CEAB79C11BA949CE001F320B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		CEAB79C21BA949CE001F320B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		CEAB79C41BA949CE001F320B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		CEAB79C51BA949CE001F320B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		CEAB79C71BA949CE001F320B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		CEAB79C81BA949CE001F320B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CE4372131BAD2A1800B28B0D /* Build configuration list for PBXNativeTarget "hogehogefoofoobarbarTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE4372141BAD2A1800B28B0D /* Debug */,
+				CE4372151BAD2A1800B28B0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEAB79A01BA949CE001F320B /* Build configuration list for PBXProject "hogehogefoofoobarbar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEAB79B21BA949CE001F320B /* Debug */,
+				CEAB79B31BA949CE001F320B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEAB79B41BA949CE001F320B /* Build configuration list for PBXLegacyTarget "All" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEAB79B51BA949CE001F320B /* Debug */,
+				CEAB79B61BA949CE001F320B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEAB79B71BA949CE001F320B /* Build configuration list for PBXLegacyTarget "Build" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEAB79B81BA949CE001F320B /* Debug */,
+				CEAB79B91BA949CE001F320B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEAB79BA1BA949CE001F320B /* Build configuration list for PBXLegacyTarget "Upload" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEAB79BB1BA949CE001F320B /* Debug */,
+				CEAB79BC1BA949CE001F320B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEAB79BD1BA949CE001F320B /* Build configuration list for PBXLegacyTarget "Build&Upload" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEAB79BE1BA949CE001F320B /* Debug */,
+				CEAB79BF1BA949CE001F320B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEAB79C01BA949CE001F320B /* Build configuration list for PBXLegacyTarget "Clean" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEAB79C11BA949CE001F320B /* Debug */,
+				CEAB79C21BA949CE001F320B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEAB79C31BA949CE001F320B /* Build configuration list for PBXLegacyTarget "AllClean" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEAB79C41BA949CE001F320B /* Debug */,
+				CEAB79C51BA949CE001F320B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEAB79C61BA949CE001F320B /* Build configuration list for PBXNativeTarget "Index" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEAB79C71BA949CE001F320B /* Debug */,
+				CEAB79C81BA949CE001F320B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CEAB799D1BA949CE001F320B /* Project object */;
+}
