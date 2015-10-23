@@ -14,24 +14,25 @@ private:
     DigitalOut digital1;
     DigitalOut digital2;
     PwmOut  analog;
-    int16_t currentSpeed;
-    int16_t steps[numOfSteps];
-    int16_t lastSpecifiedPower;
+    int32_t currentSpeed;
+    int32_t steps[numOfSteps];
+    int32_t lastSpecifiedPower;
     bool shouldHold;
     bool shouldFree;
-    int16_t *stepsPoint;
-    const int16_t *stepsTerminalPoint;
+    int32_t *stepsPoint;
+    const int32_t *stepsTerminalPoint;
     
 public:
     GCMotor(uint8_t dig1, uint8_t dig2, uint8_t ana);
-    void forward(int16_t power);
+    void forward(int32_t power);
+    void forward(float power);
     void hold(void);
     void free(void);
     void holdImmediately();
     void freeImmediately();
-    void setPower(int16_t power);
+    void setPower(int32_t power);
     int fixPower;
-    int16_t getCurrentSpeed();
+    int32_t getCurrentSpeed();
 };
 #pragma GCC diagnostic pop
 
