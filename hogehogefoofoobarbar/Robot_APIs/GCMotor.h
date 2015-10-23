@@ -26,6 +26,9 @@ public:
     GCMotor(uint8_t dig1, uint8_t dig2, uint8_t ana);
     void forward(int32_t power);
     void forward(float power);
+	void forward(double power) {
+		forward(static_cast<float>(power));
+	}
     void hold(void);
     void free(void);
     void holdImmediately();

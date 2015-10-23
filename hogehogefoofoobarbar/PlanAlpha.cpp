@@ -2,21 +2,22 @@
 #include <limits>
 #include <stdlib.h>
 
-decltype(PlanAlpha::speaker) PlanAlpha::speaker;
-GCADJD                       PlanAlpha::leftColorSensor(I2CDevice::Pin::I2C2);
-GCADJD                       PlanAlpha::rightColorSensor(I2CDevice::Pin::I2C1);
+decltype(PlanAlpha::speaker1) PlanAlpha::speaker1;
+decltype(PlanAlpha::speaker2) PlanAlpha::speaker2;
+//GCADJD                       PlanAlpha::leftColorSensor(I2CDevice::Pin::I2C2);
+//GCADJD                       PlanAlpha::rightColorSensor(I2CDevice::Pin::I2C1);
 //GC6050             PlanAlpha::gyroAcceleroSensor(I2CDevice::Pin::I2C2);
 //PAL3G4200D         PlanAlpha::gyroSensor(I2CDevice::Pin::I2C2);
-PALineSensor                 PlanAlpha::forwardLeftLineSensor(6, 1000);
-PALineSensor                 PlanAlpha::forwardCenterLineSensor(5, 1000);
-PALineSensor                 PlanAlpha::forwardRightLineSensor(3, 1000);
+PALineSensor                 PlanAlpha::forwardLeftLineSensor(6, 1600);
+PALineSensor                 PlanAlpha::forwardCenterLineSensor(5, 1400);
+PALineSensor                 PlanAlpha::forwardRightLineSensor(3, 1400);
 PALineSensor                 PlanAlpha::middleLeftLineSensor(7, 1000);
 PALineSensor                 PlanAlpha::middleRightLineSensor(8, 1000);
 PAThreeLineSensors           PlanAlpha::forwardLineSensors(
                                   &forwardLeftLineSensor, &forwardCenterLineSensor, &forwardRightLineSensor
                              );
 GCMotor                      PlanAlpha::leftMotor(13, 14, 11);
-GCMotor                      PlanAlpha::rightMotor(12, 2, 10);
+GCMotor                      PlanAlpha::rightMotor(2, 12, 10);
 
 #define NOTE_B0  31
 #define NOTE_C1  33
