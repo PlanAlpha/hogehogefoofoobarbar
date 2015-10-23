@@ -2,21 +2,21 @@
 #include <limits>
 #include <stdlib.h>
 
-PASpeaker<25>      PlanAlpha::speaker;
-//GCADJD             PlanAlpha::leftColorSensor(I2CDevice::Pin::I2C2);
-//GCADJD             PlanAlpha::rightColorSensor(I2CDevice::Pin::I2C1);
+decltype(PlanAlpha::speaker) PlanAlpha::speaker;
+GCADJD                       PlanAlpha::leftColorSensor(I2CDevice::Pin::I2C2);
+GCADJD                       PlanAlpha::rightColorSensor(I2CDevice::Pin::I2C1);
 //GC6050             PlanAlpha::gyroAcceleroSensor(I2CDevice::Pin::I2C2);
 //PAL3G4200D         PlanAlpha::gyroSensor(I2CDevice::Pin::I2C2);
-PALineSensor       PlanAlpha::forwardLeftLineSensor(5, 1000);
-PALineSensor       PlanAlpha::forwardCenterLineSensor(4, 1000);
-PALineSensor       PlanAlpha::forwardRightLineSensor(3, 1000);
-PALineSensor       PlanAlpha::middleLeftLineSensor(6, 1000);
-PALineSensor       PlanAlpha::middleRightLineSensor(7, 1000);
-PAThreeLineSensors PlanAlpha::forwardLineSensors(
-                        &forwardLeftLineSensor, &forwardCenterLineSensor, &forwardRightLineSensor
-                   );
-GCMotor            PlanAlpha::leftMotor(10, 11);
-GCMotor            PlanAlpha::rightMotor(8, 9);
+PALineSensor                 PlanAlpha::forwardLeftLineSensor(6, 1000);
+PALineSensor                 PlanAlpha::forwardCenterLineSensor(5, 1000);
+PALineSensor                 PlanAlpha::forwardRightLineSensor(3, 1000);
+PALineSensor                 PlanAlpha::middleLeftLineSensor(7, 1000);
+PALineSensor                 PlanAlpha::middleRightLineSensor(8, 1000);
+PAThreeLineSensors           PlanAlpha::forwardLineSensors(
+                                  &forwardLeftLineSensor, &forwardCenterLineSensor, &forwardRightLineSensor
+                             );
+GCMotor                      PlanAlpha::leftMotor(13, 14, 11);
+GCMotor                      PlanAlpha::rightMotor(12, 2, 10);
 
 #define NOTE_B0  31
 #define NOTE_C1  33
@@ -650,22 +650,22 @@ unsigned int __FLASH__ song_sizes[] = {
     sizeof(jr_sh2_2) / sizeof(jr_sh2_2[0]),
 };
 
-class Initializer {
-public:
-    Initializer() {
-        srand(PlanAlpha::forwardCenterLineSensor.readRawValue());
-        int num = static_cast<int>(rand() * (sizeof(song_sizes) / sizeof(song_sizes[0]) + 1.0) / (1.0 + RAND_MAX));
-        const Note *song = songs[num];
-        int size = song_sizes[num];
-        for (int i = 0; i < size; i++) {
-            if (song[i].note) {
-                PlanAlpha::speaker.play(
-                                        song[i].note, std::numeric_limits<uint16_t>::max() / 2, song[i].duration
-                                        );
-            }
-            delay(song[i].duration + 10);
-        }
-    }
-};
-
-static Initializer dummy;
+//class Initializer {
+//public:
+//    Initializer() {
+//        srand(PlanAlpha::forwardCenterLineSensor.readRawValue());
+//        int num = static_cast<int>(rand() * (sizeof(song_sizes) / sizeof(song_sizes[0]) + 1.0) / (1.0 + RAND_MAX));
+//        const Note *song = songs[num];
+//        int size = song_sizes[num];
+//        for (int i = 0; i < size; i++) {
+//            if (song[i].note) {
+//                PlanAlpha::speaker.play(
+//                                        song[i].note, std::numeric_limits<uint16_t>::max() / 2, song[i].duration
+//                                        );
+//            }
+//            delay(song[i].duration + 10);
+//        }
+//    }
+//};
+//
+//static Initializer dummy;
