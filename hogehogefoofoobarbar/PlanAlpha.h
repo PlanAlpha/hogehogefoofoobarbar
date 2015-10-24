@@ -46,7 +46,6 @@
 #ifndef __PlanAlpha__
 #define __PlanAlpha__
 
-
 #include "Robot_APIs/PASpeaker.h"
 #include "Robot_APIs/GCADJD.h"
 #include "Robot_APIs/GC6050.h"
@@ -54,6 +53,7 @@
 #include "Robot_APIs/PALineSensor.h"
 #include "Robot_APIs/PAThreeLineSensors.h"
 #include "Robot_APIs/GCMotor.h"
+#include "Core_APIs/DigitalIn.h"
 
 namespace PlanAlpha {
     extern PASpeaker<4>       speaker1;
@@ -70,6 +70,7 @@ namespace PlanAlpha {
     extern PAThreeLineSensors forwardLineSensors;
     extern GCMotor            leftMotor;
     extern GCMotor            rightMotor;
+    extern DigitalIn          powerSwitch;
 }
 
 #endif

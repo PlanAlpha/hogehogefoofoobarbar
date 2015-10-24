@@ -18,6 +18,7 @@ PAThreeLineSensors           PlanAlpha::forwardLineSensors(
                              );
 GCMotor                      PlanAlpha::leftMotor(13, 14, 11);
 GCMotor                      PlanAlpha::rightMotor(2, 12, 10);
+decltype(PlanAlpha::powerSwitch) PlanAlpha::powerSwitch(28);
 
 #define NOTE_B0  31
 #define NOTE_C1  33
@@ -651,9 +652,34 @@ unsigned int __FLASH__ song_sizes[] = {
     sizeof(jr_sh2_2) / sizeof(jr_sh2_2[0]),
 };
 
-//class Initializer {
-//public:
-//    Initializer() {
+const int noteFrequencies[] = {
+    0,  9,  9, 10,  10, 11,   12,  12, 13, 14, 15, 15,
+    16,  17, 18, 19,  21, 22,  23,  25, 26, 28, 29, 31,
+    33,  35, 37,  39,  41, 44,  46, 49, 52, 55, 58, 62,
+    65, 69, 73, 78,  82, 87,  93, 98, 104,  110,  117,  124,
+    131, 139, 147, 156, 165, 175, 185,  196,  208,  220,  233,  247,
+    262, 277, 294, 311, 330, 349, 370,  392,  415,  440,  466,  494,
+    523, 554, 587, 622, 659, 699, 740,  784,  831,  880,  932,  988,
+    1047, 1109, 1175, 1245, 1319, 1397, 1480, 1568, 1661, 1760, 1865, 1976,
+    2093, 2218, 2349, 2489, 2637, 2794, 2960, 3136, 3322, 3520, 3729, 3951,
+    4186, 4435, 4699, 4978, 5274, 5587, 5920, 6272, 6645, 7040, 7459, 7902,
+    8372, 8870, 9397, 9956, 10548,11175,  11840,  12544
+};
+
+static bool myDelay(unsigned long ms)
+{
+    if (PlanAlpha::powerSwitch.read() == false) {
+        PlanAlpha::speaker1.pwm->write(0);
+        PlanAlpha::speaker2.pwm->write(0);
+        return true;
+    }
+    delay(ms);
+    return false;
+}
+
+class Initializer {
+public:
+    Initializer() {
 //        srand(PlanAlpha::forwardCenterLineSensor.readRawValue());
 //        int num = static_cast<int>(rand() * (sizeof(song_sizes) / sizeof(song_sizes[0]) + 1.0) / (1.0 + RAND_MAX));
 //        const Note *song = songs[num];
@@ -666,7 +692,299 @@ unsigned int __FLASH__ song_sizes[] = {
 //            }
 //            delay(song[i].duration + 10);
 //        }
-//    }
-//};
-//
-//static Initializer dummy;
+        using namespace PlanAlpha;
+        const uint16_t level = std::numeric_limits<uint16_t>::max() / 2;
+        
+        speaker1.pwm->setPeriod(1000000 / noteFrequencies[60]);
+        speaker1.pwm->write(level);
+        speaker2.pwm->write(0);
+        if (myDelay(137)) return;
+        speaker1.pwm->setPeriod(1000000 / noteFrequencies[67]);
+        speaker1.pwm->write(level);
+        if (myDelay(137)) return;
+        speaker1.pwm->setPeriod(1000000 / noteFrequencies[72]);
+        speaker1.pwm->write(level);
+        if (myDelay(136)) return;
+        speaker1.pwm->setPeriod(1000000 / noteFrequencies[67]);
+        speaker1.pwm->write(level);
+        if (myDelay(138)) return;
+        speaker1.pwm->setPeriod(1000000 / noteFrequencies[60]);
+        speaker1.pwm->write(level);
+        if (myDelay(138)) return;
+        speaker1.pwm->setPeriod(1000000 / noteFrequencies[67]);
+        speaker1.pwm->write(level);
+        if (myDelay(136)) return;
+        speaker1.pwm->setPeriod(1000000 / noteFrequencies[72]);
+        speaker1.pwm->write(level);
+        if (myDelay(136)) return;
+        speaker1.pwm->setPeriod(1000000 / noteFrequencies[67]);
+        speaker1.pwm->write(level);
+        if (myDelay(138)) return;
+        speaker1.pwm->setPeriod(1000000 / noteFrequencies[60]);
+        speaker1.pwm->write(level);
+        if (myDelay(136)) return;
+        speaker1.pwm->setPeriod(1000000 / noteFrequencies[67]);
+        speaker1.pwm->write(level);
+        if (myDelay(137)) return;
+        speaker1.pwm->setPeriod(1000000 / noteFrequencies[72]);
+        speaker1.pwm->write(level);
+        if (myDelay(137)) return;
+        speaker1.pwm->setPeriod(1000000 / noteFrequencies[67]);
+        speaker1.pwm->write(level);
+        if (myDelay(138)) return;
+        speaker1.pwm->setPeriod(1000000 / noteFrequencies[60]);
+        speaker1.pwm->write(level);
+        if (myDelay(137)) return;
+        speaker1.pwm->setPeriod(1000000 / noteFrequencies[67]);
+        speaker1.pwm->write(level);
+        if (myDelay(136)) return;
+        speaker1.pwm->setPeriod(1000000 / noteFrequencies[72]);
+        speaker1.pwm->write(level);
+        if (myDelay(138)) return;
+        speaker1.pwm->setPeriod(1000000 / noteFrequencies[67]);
+        speaker1.pwm->write(level);
+        if (myDelay(136)) return;
+        speaker1.pwm->setPeriod(1000000 / noteFrequencies[60]);
+        speaker1.pwm->write(level);
+        speaker2.pwm->setPeriod(1000000 / noteFrequencies[72]);
+        speaker2.pwm->write(level);
+        if (myDelay(137)) return;
+        speaker1.pwm->setPeriod(1000000 / noteFrequencies[67]);
+        speaker1.pwm->write(level);
+        speaker2.pwm->setPeriod(1000000 / noteFrequencies[79]);
+        speaker2.pwm->write(level);
+        if (myDelay(138)) return;
+        speaker1.pwm->setPeriod(1000000 / noteFrequencies[72]);
+        speaker1.pwm->write(level);
+        speaker2.pwm->setPeriod(1000000 / noteFrequencies[84]);
+        speaker2.pwm->write(level);
+        if (myDelay(135)) return;
+        speaker1.pwm->setPeriod(1000000 / noteFrequencies[67]);
+        speaker1.pwm->write(level);
+        speaker2.pwm->setPeriod(1000000 / noteFrequencies[79]);
+        speaker2.pwm->write(level);
+        if (myDelay(137)) return;
+        speaker1.pwm->setPeriod(1000000 / noteFrequencies[60]);
+        speaker1.pwm->write(level);
+        speaker2.pwm->setPeriod(1000000 / noteFrequencies[72]);
+        speaker2.pwm->write(level);
+        if (myDelay(138)) return;
+        speaker1.pwm->setPeriod(1000000 / noteFrequencies[67]);
+        speaker1.pwm->write(level);
+        speaker2.pwm->setPeriod(1000000 / noteFrequencies[79]);
+        speaker2.pwm->write(level);
+        if (myDelay(136)) return;
+        speaker1.pwm->setPeriod(1000000 / noteFrequencies[72]);
+        speaker1.pwm->write(level);
+        speaker2.pwm->setPeriod(1000000 / noteFrequencies[84]);
+        speaker2.pwm->write(level);
+        if (myDelay(138)) return;
+        speaker1.pwm->setPeriod(1000000 / noteFrequencies[67]);
+        speaker1.pwm->write(level);
+        speaker2.pwm->setPeriod(1000000 / noteFrequencies[79]);
+        speaker2.pwm->write(level);
+        if (myDelay(136)) return;
+        speaker1.pwm->setPeriod(1000000 / noteFrequencies[60]);
+        speaker1.pwm->write(level);
+        speaker2.pwm->setPeriod(1000000 / noteFrequencies[72]);
+        speaker2.pwm->write(level);
+        if (myDelay(137)) return;
+        speaker1.pwm->setPeriod(1000000 / noteFrequencies[67]);
+        speaker1.pwm->write(level);
+        speaker2.pwm->setPeriod(1000000 / noteFrequencies[79]);
+        speaker2.pwm->write(level);
+        if (myDelay(138)) return;
+        speaker1.pwm->setPeriod(1000000 / noteFrequencies[72]);
+        speaker1.pwm->write(level);
+        speaker2.pwm->setPeriod(1000000 / noteFrequencies[84]);
+        speaker2.pwm->write(level);
+        if (myDelay(135)) return;
+        speaker1.pwm->setPeriod(1000000 / noteFrequencies[67]);
+        speaker1.pwm->write(level);
+        speaker2.pwm->setPeriod(1000000 / noteFrequencies[79]);
+        speaker2.pwm->write(level);
+        if (myDelay(137)) return;
+        speaker1.pwm->setPeriod(1000000 / noteFrequencies[60]);
+        speaker1.pwm->write(level);
+        speaker2.pwm->setPeriod(1000000 / noteFrequencies[72]);
+        speaker2.pwm->write(level);
+        if (myDelay(137)) return;
+        speaker1.pwm->setPeriod(1000000 / noteFrequencies[67]);
+        speaker1.pwm->write(level);
+        speaker2.pwm->setPeriod(1000000 / noteFrequencies[79]);
+        speaker2.pwm->write(level);
+        if (myDelay(137)) return;
+        speaker1.pwm->setPeriod(1000000 / noteFrequencies[72]);
+        speaker1.pwm->write(level);
+        speaker2.pwm->setPeriod(1000000 / noteFrequencies[84]);
+        speaker2.pwm->write(level);
+        if (myDelay(138)) return;
+        speaker1.pwm->setPeriod(1000000 / noteFrequencies[67]);
+        speaker1.pwm->write(level);
+        speaker2.pwm->setPeriod(1000000 / noteFrequencies[79]);
+        speaker2.pwm->write(level);
+        if (myDelay(135)) return;
+        speaker1.pwm->setPeriod(1000000 / noteFrequencies[60]);
+        speaker1.pwm->write(level);
+        speaker2.pwm->setPeriod(1000000 / noteFrequencies[72]);
+        speaker2.pwm->write(level);
+        if (myDelay(137)) return;
+        speaker1.pwm->setPeriod(1000000 / noteFrequencies[67]);
+        speaker1.pwm->write(level);
+        speaker2.pwm->setPeriod(1000000 / noteFrequencies[91]);
+        speaker2.pwm->write(level);
+        if (myDelay(137)) return;
+        speaker1.pwm->setPeriod(1000000 / noteFrequencies[72]);
+        speaker1.pwm->write(level);
+        speaker2.pwm->setPeriod(1000000 / noteFrequencies[96]);
+        speaker2.pwm->write(level);
+        if (myDelay(136)) return;
+        speaker1.pwm->setPeriod(1000000 / noteFrequencies[67]);
+        speaker1.pwm->write(level);
+        speaker2.pwm->setPeriod(1000000 / noteFrequencies[91]);
+        speaker2.pwm->write(level);
+        if (myDelay(138)) return;
+        speaker1.pwm->setPeriod(1000000 / noteFrequencies[60]);
+        speaker1.pwm->write(level);
+        speaker2.pwm->setPeriod(1000000 / noteFrequencies[72]);
+        speaker2.pwm->write(level);
+        if (myDelay(136)) return;
+        speaker1.pwm->setPeriod(1000000 / noteFrequencies[67]);
+        speaker1.pwm->write(level);
+        speaker2.pwm->setPeriod(1000000 / noteFrequencies[91]);
+        speaker2.pwm->write(level);
+        if (myDelay(137)) return;
+        speaker1.pwm->setPeriod(1000000 / noteFrequencies[72]);
+        speaker1.pwm->write(level);
+        speaker2.pwm->setPeriod(1000000 / noteFrequencies[96]);
+        speaker2.pwm->write(level);
+        if (myDelay(138)) return;
+        speaker1.pwm->setPeriod(1000000 / noteFrequencies[67]);
+        speaker1.pwm->write(level);
+        speaker2.pwm->setPeriod(1000000 / noteFrequencies[91]);
+        speaker2.pwm->write(level);
+        if (myDelay(135)) return;
+        speaker1.pwm->setPeriod(1000000 / noteFrequencies[60]);
+        speaker1.pwm->write(level);
+        speaker2.pwm->setPeriod(1000000 / noteFrequencies[72]);
+        speaker2.pwm->write(level);
+        if (myDelay(137)) return;
+        speaker1.pwm->setPeriod(1000000 / noteFrequencies[67]);
+        speaker1.pwm->write(level);
+        speaker2.pwm->setPeriod(1000000 / noteFrequencies[91]);
+        speaker2.pwm->write(level);
+        if (myDelay(136)) return;
+        speaker1.pwm->setPeriod(1000000 / noteFrequencies[72]);
+        speaker1.pwm->write(level);
+        speaker2.pwm->setPeriod(1000000 / noteFrequencies[96]);
+        speaker2.pwm->write(level);
+        if (myDelay(137)) return;
+        speaker1.pwm->setPeriod(1000000 / noteFrequencies[67]);
+        speaker1.pwm->write(level);
+        speaker2.pwm->setPeriod(1000000 / noteFrequencies[91]);
+        speaker2.pwm->write(level);
+        if (myDelay(137)) return;
+        speaker1.pwm->setPeriod(1000000 / noteFrequencies[60]);
+        speaker1.pwm->write(level);
+        speaker2.pwm->setPeriod(1000000 / noteFrequencies[72]);
+        speaker2.pwm->write(level);
+        if (myDelay(136)) return;
+        speaker1.pwm->setPeriod(1000000 / noteFrequencies[67]);
+        speaker1.pwm->write(level);
+        speaker2.pwm->setPeriod(1000000 / noteFrequencies[91]);
+        speaker2.pwm->write(level);
+        if (myDelay(137)) return;
+        speaker1.pwm->setPeriod(1000000 / noteFrequencies[72]);
+        speaker1.pwm->write(level);
+        speaker2.pwm->setPeriod(1000000 / noteFrequencies[96]);
+        speaker2.pwm->write(level);
+        if (myDelay(136)) return;
+        speaker1.pwm->setPeriod(1000000 / noteFrequencies[67]);
+        speaker1.pwm->write(level);
+        speaker2.pwm->setPeriod(1000000 / noteFrequencies[91]);
+        speaker2.pwm->write(level);
+        //set_ch(ADDR_FREQ_C, 79);
+        if (myDelay(137)) return;
+        speaker1.pwm->setPeriod(1000000 / noteFrequencies[67]);
+        speaker1.pwm->write(level);
+        speaker2.pwm->setPeriod(1000000 / noteFrequencies[79]);
+        speaker2.pwm->write(level);
+        //set_ch(ADDR_FREQ_C, 0);
+        if (myDelay(138)) return;
+        speaker1.pwm->setPeriod(1000000 / noteFrequencies[68]);
+        speaker1.pwm->write(level);
+        speaker2.pwm->setPeriod(1000000 / noteFrequencies[80]);
+        speaker2.pwm->write(level);
+        if (myDelay(136)) return;
+        speaker1.pwm->setPeriod(1000000 / noteFrequencies[72]);
+        speaker1.pwm->write(level);
+        speaker2.pwm->setPeriod(1000000 / noteFrequencies[84]);
+        speaker2.pwm->write(level);
+        if (myDelay(137)) return;
+        speaker1.pwm->setPeriod(1000000 / noteFrequencies[75]);
+        speaker1.pwm->write(level);
+        speaker2.pwm->setPeriod(1000000 / noteFrequencies[87]);
+        speaker2.pwm->write(level);
+        if (myDelay(138)) return;
+        speaker1.pwm->setPeriod(1000000 / noteFrequencies[82]);
+        speaker1.pwm->write(level);
+        speaker2.pwm->setPeriod(1000000 / noteFrequencies[94]);
+        speaker2.pwm->write(level);
+        if (myDelay(136)) return;
+        speaker1.pwm->setPeriod(1000000 / noteFrequencies[80]);
+        speaker1.pwm->write(level);
+        speaker2.pwm->setPeriod(1000000 / noteFrequencies[92]);
+        speaker2.pwm->write(level);
+        if (myDelay(137)) return;
+        speaker1.pwm->setPeriod(1000000 / noteFrequencies[84]);
+        speaker1.pwm->write(level);
+        speaker2.pwm->setPeriod(1000000 / noteFrequencies[96]);
+        speaker2.pwm->write(level);
+        if (myDelay(137)) return;
+        speaker1.pwm->setPeriod(1000000 / noteFrequencies[75]);
+        speaker1.pwm->write(level);
+        speaker2.pwm->setPeriod(1000000 / noteFrequencies[87]);
+        speaker2.pwm->write(level);
+        if (myDelay(137)) return;
+        speaker1.pwm->setPeriod(1000000 / noteFrequencies[70]);
+        speaker1.pwm->write(level);
+        speaker2.pwm->setPeriod(1000000 / noteFrequencies[82]);
+        speaker2.pwm->write(level);
+        if (myDelay(137)) return;
+        speaker1.pwm->setPeriod(1000000 / noteFrequencies[70]);
+        speaker1.pwm->write(level);
+        speaker2.pwm->setPeriod(1000000 / noteFrequencies[82]);
+        speaker2.pwm->write(level);
+        if (myDelay(136)) return;
+        speaker1.pwm->setPeriod(1000000 / noteFrequencies[74]);
+        speaker1.pwm->write(level);
+        speaker2.pwm->setPeriod(1000000 / noteFrequencies[86]);
+        speaker2.pwm->write(level);
+        if (myDelay(137)) return;
+        speaker1.pwm->setPeriod(1000000 / noteFrequencies[77]);
+        speaker1.pwm->write(level);
+        speaker2.pwm->setPeriod(1000000 / noteFrequencies[89]);
+        speaker2.pwm->write(level);
+        if (myDelay(137)) return;
+        speaker1.pwm->setPeriod(1000000 / noteFrequencies[84]);
+        speaker1.pwm->write(level);
+        speaker2.pwm->setPeriod(1000000 / noteFrequencies[96]);
+        speaker2.pwm->write(level);
+        if (myDelay(137)) return;
+        speaker1.pwm->setPeriod(1000000 / noteFrequencies[86]);
+        speaker1.pwm->write(level);
+        speaker2.pwm->setPeriod(1000000 / noteFrequencies[98]);
+        speaker2.pwm->write(level);
+        if (myDelay(138)) return;
+        speaker1.pwm->setPeriod(1000000 / noteFrequencies[89]);
+        speaker1.pwm->write(level);
+        speaker2.pwm->setPeriod(1000000 / noteFrequencies[101]);
+        speaker2.pwm->write(level);
+        if (myDelay(136)) return;
+        speaker1.play(noteFrequencies[96], level, 687);
+        speaker2.play(noteFrequencies[108], level, 687);
+        if (myDelay(687)) return;
+    }
+};
+
+static Initializer dummy;

@@ -9,7 +9,10 @@
 
 template <uint8_t pin>
 class PASpeaker {
+public:
     static PwmOut *pwm;
+    
+private:
     PwmOut pwmInstance;
     static uint32_t count;
     static uint32_t countLimit;
