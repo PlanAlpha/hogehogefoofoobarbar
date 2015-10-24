@@ -27,7 +27,7 @@ int main(int __attribute__((unused)) argc, const char __attribute__((unused)) * 
 //		}
 //	}
 	
-	double motorSpeed = 0.2;
+	double motorSpeed = 0.15;
 	while (1) {
 		if (forwardLineSensors.read() & PAThreeLineSensors::Left) {
 			if (forwardLineSensors.read() & PAThreeLineSensors::Right) {
